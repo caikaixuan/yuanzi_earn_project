@@ -1,0 +1,12 @@
+2018-11-13 10:55:54,864:INFO qtp1747702724-25 (LogAspect.java:32) - com.ygbc.brain.authorization.api.impl.AuthorServiceFacadeImpl.login开始执行
+2018-11-13 10:55:54,895:INFO qtp1747702724-25 (LogAspect.java:51) - 请求参数1:{"data":{"password":"admin","loginName":"admin"},"pending":false}
+2018-11-13 10:55:55,002:DEBUG qtp1747702724-25 (BaseJdbcLogger.java:159) - ==>  Preparing: select id, login_name, user_name, password, identity_code, mobile, telephone, mail, job_no, status, release_currency, release_amount, party_code, party_name, entity_code, user_group_code, regist_time, last_login_time, password_expire_date, password_change_time, create_time, create_by, update_time, update_by, ver, is_del from sys_user where login_name = ? and 1 = 1 
+2018-11-13 10:55:55,036:DEBUG qtp1747702724-25 (BaseJdbcLogger.java:159) - ==> Parameters: admin(String)
+2018-11-13 10:55:55,125:DEBUG qtp1747702724-25 (BaseJdbcLogger.java:159) - <==      Total: 1
+2018-11-13 10:55:55,176:INFO qtp1747702724-25 (LogAspect.java:64) - com.ygbc.brain.authorization.api.impl.AuthorServiceFacadeImpl.login返回值:{"data":{"sessionId":"f2379add-db22-426e-815d-fe0aa61ce6b7"},"pageNo":1,"pageSize":10,"respCode":"0000","respMsg":"成功","totalCount":0,"totalPage":0}
+2018-11-13 11:04:11,505:INFO qtp1747702724-23 (LogAspect.java:32) - com.ygbc.brain.authorization.api.impl.AuthorServiceFacadeImpl.login开始执行
+2018-11-13 11:04:11,506:INFO qtp1747702724-23 (LogAspect.java:51) - 请求参数1:{"data":{"password":"admin","loginName":"admin"},"pending":false}
+2018-11-13 11:04:11,519:DEBUG qtp1747702724-23 (BaseJdbcLogger.java:159) - ==>  Preparing: select id, login_name, user_name, password, identity_code, mobile, telephone, mail, job_no, status, release_currency, release_amount, party_code, party_name, entity_code, user_group_code, regist_time, last_login_time, password_expire_date, password_change_time, create_time, create_by, update_time, update_by, ver, is_del from sys_user where login_name = ? and 1 = 1 
+2018-11-13 11:04:11,520:DEBUG qtp1747702724-23 (BaseJdbcLogger.java:159) - ==> Parameters: admin(String)
+2018-11-13 11:04:11,530:DEBUG qtp1747702724-23 (BaseJdbcLogger.java:159) - <==      Total: 1
+2018-11-13 11:04:11,547:INFO qtp1747702724-23 (LogAspect.java:64) - com.ygbc.brain.authorization.api.impl.AuthorServiceFacadeImpl.login返回值:{"data":{"sessionId":"f2379add-db22-426e-815d-fe0aa61ce6b7"},"pageNo":1,"pageSize":10,"respCode":"0000","respMsg":"成功","totalCount":0,"totalPage":0}

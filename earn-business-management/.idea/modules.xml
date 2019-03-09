@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/earn-business-management.iml" filepath="$PROJECT_DIR$/.idea/earn-business-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-business-management-api/earn-business-management-api.iml" filepath="$PROJECT_DIR$/earn-business-management-api/earn-business-management-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-business-management-service/earn-business-management-service.iml" filepath="$PROJECT_DIR$/earn-business-management-service/earn-business-management-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-business-management-web/earn-business-management-web.iml" filepath="$PROJECT_DIR$/earn-business-management-web/earn-business-management-web.iml" />
+    </modules>
+  </component>
+</project>

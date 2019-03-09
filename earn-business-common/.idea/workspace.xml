@@ -1,0 +1,1595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eaba5955-613b-4a85-815c-182ae9d55118" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/AwardLevel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/Channel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/PoolStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AlgorithmMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AnswerRecordMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ChargeRecordMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ParticipantPoolChartMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PoolMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PoolRecordChartMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/QuestionMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/SysParameterMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TopicMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserPoolRecordMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/WithdrawRecordMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/CodeTableDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/MenuDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/RoleDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/SequenceDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/UserDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/UserRoleDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/BaseData.java" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/BaseData.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/CodeTableData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/MenuData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/RoleData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/SequenceData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/UserData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/UserRoleData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/TransactionType.java" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/InviteNumberStatus.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/UserStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/UserStatus.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/YesNo.java" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/QuestionType.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/module/SysModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/module/SysModule.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/service/CodeTableService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/service/DisplayService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/service/SequenceService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysCodeTableMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysMenuMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysRoleMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysSequenceMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysUserMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SysUserRoleMapper.xml" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PoolBeLocked.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolBeLocked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolProcessor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+              <folding>
+                <element signature="e#7713#7714#0" expanded="true" />
+                <element signature="e#7746#7747#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="37" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/Pool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#2131#2132#0" expanded="true" />
+                <element signature="e#2185#2186#0" expanded="true" />
+                <element signature="e#2375#2376#0" expanded="true" />
+                <element signature="e#2427#2428#0" expanded="true" />
+                <element signature="e#2614#2615#0" expanded="true" />
+                <element signature="e#2671#2672#0" expanded="true" />
+                <element signature="e#2876#2877#0" expanded="true" />
+                <element signature="e#2931#2932#0" expanded="true" />
+                <element signature="e#5064#5065#0" expanded="true" />
+                <element signature="e#5109#5110#0" expanded="true" />
+                <element signature="e#5166#5167#0" expanded="true" />
+                <element signature="e#5216#5217#0" expanded="true" />
+                <element signature="e#5602#5603#0" expanded="true" />
+                <element signature="e#5649#5650#0" expanded="true" />
+                <element signature="e#5710#5711#0" expanded="true" />
+                <element signature="e#5764#5765#0" expanded="true" />
+                <element signature="e#5804#5805#0" expanded="true" />
+                <element signature="e#5852#5853#0" expanded="true" />
+                <element signature="e#5912#5913#0" expanded="true" />
+                <element signature="e#5968#5969#0" expanded="true" />
+                <element signature="e#7865#7866#0" expanded="true" />
+                <element signature="e#7929#7930#0" expanded="true" />
+                <element signature="e#7975#7976#0" expanded="true" />
+                <element signature="e#8044#8045#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/AttributeEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolNewSuccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewSuccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolNewRecordDone.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewRecordDone.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolRecordChart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordChart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="116" column="62" lean-forward="false" selection-start-line="116" selection-start-column="62" selection-end-line="116" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantPoolCharts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolCharts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantPoolChart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolChart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1125">
+              <caret line="117" column="30" lean-forward="false" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pool</find>
+      <find>chart</find>
+      <find>PoolProcessor.</find>
+      <find>public static</find>
+      <find>management.listener</find>
+      <find>management</find>
+      <find>SysParameterProcessor.getInstance()</find>
+      <find>implements Listener&lt;Pool&gt;</find>
+      <find>PoolProcessor.getInstance()</find>
+      <find>selectOne</find>
+      <find>EntityAttrsClearAspect is initing ...</find>
+      <find>status</find>
+      <find>00</find>
+      <find>consumeIntegration</find>
+      <find>setAward</find>
+      <find>setAward()</find>
+      <find>addUserPoolRecord</find>
+      <find>o2</find>
+      <find>Integer</find>
+      <find>ranked</find>
+      <find>int</find>
+      <find>sysParameterProcessor.getSysParameter()</find>
+      <find>SysParameterProcessor</find>
+      <find>Platform.sdbInsert</find>
+      <find>addNewParticipant</find>
+      <find>addWinnerNum</find>
+      <find>this.data</find>
+      <find>period</find>
+      <find>addWinner</find>
+      <find>addParticipantPoolChart</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>earn</replace>
+      <replace>com.ygbc.brain.business.common.dal.dao</replace>
+      <replace>com.ygbc.brain.business.common.dal.data</replace>
+      <replace>POOL_RUN_LOTTERY</replace>
+      <replace>return this.data</replace>
+      <replace>Pool</replace>
+      <replace>User</replace>
+      <replace>this</replace>
+      <replace>public</replace>
+      <replace>common</replace>
+      <replace>sysParameterProcessor</replace>
+      <replace>extends BasePoolListener</replace>
+      <replace>processor</replace>
+      <replace>0000</replace>
+      <replace>rank()</replace>
+      <replace>o</replace>
+      <replace>int</replace>
+      <replace>Integer</replace>
+      <replace>sysParameterData</replace>
+      <replace>data</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/resources/mappers</dir>
+      <dir>$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/user/UserNewWithdraw.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/Base.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/UserPoolRecordStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/PoolRecordChartStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/pool/ProcessorFake.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/SysParameterDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessorFake.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/user/UserChallengeStart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/BaseData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/sys_parameter/SysParameterProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/BasePoolListener.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/QuestionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/UserPoolRecordData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/AnswerRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/AnswerRecordData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/UserPoolRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/AttributeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/common/aspect/EntityAttrsClearAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/ParticipantPoolChartStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/PoolProcessorEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/Listener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolStart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewParticipant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolDone.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolCreate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewRecordStart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/Listeners.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/user/UserProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/constants/BusinessConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/ParticipantPoolChartData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/ParticipantPoolChartMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/SysParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/UserPoolRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolRunLottery.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolBeLocked.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewSuccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordCharts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/PoolData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/PoolMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/SysParameterData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/SysParameterMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewRecordDone.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordChart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolChart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolCharts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/Pool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Security</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>Application Server Specific Inspections</id>
+          </State>
+          <State>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>FreeMarker inspections</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Google App Engine</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>JSP Inspections</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>RESTful Web Service</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring SecuritySpring</id>
+          </State>
+          <State>
+            <id>Spring Web FlowSpring</id>
+          </State>
+          <State>
+            <id>Spring Web ServicesSpring</id>
+          </State>
+          <State>
+            <id>Spring WebSocketSpring</id>
+          </State>
+          <State>
+            <id>Web Services</id>
+          </State>
+          <State>
+            <id>WebSocket issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dal" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+              <item name="sys_parameter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-common-utils:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-common-utils:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-common-utils-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-common-utils:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-common-utils-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-common" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-common-utils:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-common-utils-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="poolp&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java&#10;pom.xml&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/pom.xml&#10;pool&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/entity/Pool.java&#10;poolPro&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java&#10;sys&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/resources/mappers/SysParameterMapper.xml&#10;sysparameterd&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/dal/data/SysParameterData.java&#10;poolpr&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java&#10;Poolpro&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java&#10;busi&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/constants/BusinessConstants.java&#10;ParticipantPoolCharts&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolCharts.java&#10;business&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/constants/BusinessConstants.java&#10;poolpro&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java&#10;PoolRecordCharts&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordCharts.java&#10;PoolPro&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-common/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ygbc.brain.business.common.enums" />
+      <recent name="com.ygbc.brain.business.common.processor.pool" />
+      <recent name="com.ygbc.brain.common.aspect" />
+      <recent name="com.ygbc.brain.business.common.listener.user" />
+      <recent name="com.ygbc.brain.business.common.listener" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mappers" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="brain-business-common" />
+      <envs />
+    </configuration>
+    <configuration name="build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eaba5955-613b-4a85-815c-182ae9d55118" name="Default" comment="" />
+      <created>1546398256159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546398256159</updated>
+      <workItem from="1546398257579" duration="610000" />
+      <workItem from="1546398946454" duration="6477000" />
+      <workItem from="1546650865053" duration="3363000" />
+      <workItem from="1546911789306" duration="5443000" />
+      <workItem from="1547089557728" duration="173000" />
+      <workItem from="1547181884548" duration="1094000" />
+      <workItem from="1547432442175" duration="596000" />
+      <workItem from="1547435751442" duration="725000" />
+      <workItem from="1547439440553" duration="2301000" />
+      <workItem from="1547806887077" duration="1533000" />
+      <workItem from="1548061402446" duration="625000" />
+      <workItem from="1548070672019" duration="1063000" />
+      <workItem from="1548599341500" duration="7591000" />
+      <workItem from="1549735948355" duration="123000" />
+      <workItem from="1550198877597" duration="263000" />
+      <workItem from="1550214491138" duration="26000" />
+      <workItem from="1550216393894" duration="2200000" />
+      <workItem from="1550995448781" duration="17479000" />
+      <workItem from="1551098592255" duration="26318000" />
+      <workItem from="1551182141586" duration="7562000" />
+      <workItem from="1551262940197" duration="16008000" />
+      <workItem from="1551359727355" duration="725000" />
+      <workItem from="1551361371110" duration="14363000" />
+      <workItem from="1551422911369" duration="67511000" />
+      <workItem from="1551695123654" duration="4631000" />
+      <workItem from="1551873892814" duration="7266000" />
+      <workItem from="1551959953419" duration="5360000" />
+      <workItem from="1552046242681" duration="2699000" />
+    </task>
+    <task id="LOCAL-00001" summary="1.将BaseData中原businessCode更名为code">
+      <created>1546843380485</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546843380485</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="204128000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19347037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.27932286" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="1.将BaseData中原businessCode更名为code" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.将BaseData中原businessCode更名为code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-common-utils/1.0.0-SNAPSHOT/earn-common-utils-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/common/utils/PropertiesUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/sys_parameter/SysParameterProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/QuestionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+          <folding>
+            <marker date="1551488504653" expanded="true" signature="3590:3718" ph="select from question" />
+            <marker date="1551488504653" expanded="true" signature="3818:3882" ph="select from question" />
+            <marker date="1551488504653" expanded="true" signature="4023:4060" ph="select count... question" />
+            <marker date="1551488504653" expanded="true" signature="4191:4255" ph="select from question" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/QuestionData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/AnswerRecordData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+          <folding>
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1427#1428#0" expanded="false" />
+            <element signature="e#1463#1464#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/dao/PoolDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/AnswerRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+          <folding>
+            <marker date="1551491327445" expanded="true" signature="2943:3085" ph="select from answer_record" />
+            <marker date="1551491327445" expanded="true" signature="3185:3254" ph="select from answer_record" />
+            <marker date="1551491327445" expanded="true" signature="3395:3437" ph="select count... answer_record" />
+            <marker date="1551491327445" expanded="true" signature="3568:3637" ph="select from answer_record" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/UserPoolRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <marker date="1551497790373" expanded="true" signature="3174:3324" ph="select from user_pool_record" />
+            <marker date="1551497790373" expanded="true" signature="3424:3496" ph="select from user_pool_record" />
+            <marker date="1551497790373" expanded="true" signature="3637:3682" ph="select count... user_pool_record" />
+            <marker date="1551497790373" expanded="true" signature="3813:3885" ph="select from user_pool_record" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/common/aspect/EntityAttrsClearAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/UserPoolRecordStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/ParticipantPoolChartStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/enums/PoolProcessorEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="91" lean-forward="false" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewParticipant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolDone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/BasePoolListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/Listeners.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="31" column="63" lean-forward="false" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/user/UserProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="37" column="80" lean-forward="false" selection-start-line="37" selection-start-column="80" selection-end-line="37" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/constants/BusinessConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ParticipantPoolChartMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <marker date="1551588022856" expanded="true" signature="3671:3839" ph="select from participant_pool_chart" />
+            <marker date="1551588022856" expanded="true" signature="3939:4017" ph="select from participant_pool_chart" />
+            <marker date="1551588022856" expanded="true" signature="4158:4209" ph="select count... participant_pool_chart" />
+            <marker date="1551588022856" expanded="true" signature="4340:4418" ph="select from participant_pool_chart" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="162" column="44" lean-forward="false" selection-start-line="162" selection-start-column="44" selection-end-line="162" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/UserPoolRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="64" column="76" lean-forward="false" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+          <folding>
+            <marker date="1551625763046" expanded="true" signature="7424:7540" ph="select from user" />
+            <marker date="1551625763046" expanded="true" signature="7640:7700" ph="select from user" />
+            <marker date="1551625763046" expanded="true" signature="7841:7874" ph="select count... user" />
+            <marker date="1551625763046" expanded="true" signature="8005:8065" ph="select from user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolRunLottery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/UserPoolRecordData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/ParticipantPoolChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/BaseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/SysParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="163" column="11" lean-forward="false" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+          <folding>
+            <element signature="e#6390#6391#0" expanded="false" />
+            <element signature="e#6438#6439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/PoolMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <marker date="1551880911531" expanded="true" signature="6754:6870" ph="select from pool" />
+            <marker date="1551880911531" expanded="true" signature="6970:7030" ph="select from pool" />
+            <marker date="1551880911531" expanded="true" signature="7350:7383" ph="select count... pool" />
+            <marker date="1551880911531" expanded="true" signature="7713:7773" ph="select from pool" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewRecordStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/PoolData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="316" column="5" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="316" selection-end-column="5" />
+          <folding>
+            <element signature="e#1766#1767#0" expanded="false" />
+            <element signature="e#1795#1796#0" expanded="false" />
+            <element signature="e#1837#1838#0" expanded="false" />
+            <element signature="e#1873#1874#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="e#1954#1955#0" expanded="false" />
+            <element signature="e#2017#2018#0" expanded="false" />
+            <element signature="e#2071#2072#0" expanded="false" />
+            <element signature="e#2125#2126#0" expanded="false" />
+            <element signature="e#2174#2175#0" expanded="false" />
+            <element signature="e#2377#2378#0" expanded="false" />
+            <element signature="e#2414#2415#0" expanded="false" />
+            <element signature="e#2475#2476#0" expanded="false" />
+            <element signature="e#2527#2528#0" expanded="false" />
+            <element signature="e#2569#2570#0" expanded="false" />
+            <element signature="e#2606#2607#0" expanded="false" />
+            <element signature="e#2667#2668#0" expanded="false" />
+            <element signature="e#2719#2720#0" expanded="false" />
+            <element signature="e#2768#2769#0" expanded="false" />
+            <element signature="e#2812#2813#0" expanded="false" />
+            <element signature="e#3000#3001#0" expanded="false" />
+            <element signature="e#3042#3043#0" expanded="false" />
+            <element signature="e#3113#3114#0" expanded="false" />
+            <element signature="e#3175#3176#0" expanded="false" />
+            <element signature="e#3221#3222#0" expanded="false" />
+            <element signature="e#3262#3263#0" expanded="false" />
+            <element signature="e#3331#3332#0" expanded="false" />
+            <element signature="e#3391#3392#0" expanded="false" />
+            <element signature="e#3448#3449#0" expanded="false" />
+            <element signature="e#3500#3501#0" expanded="false" />
+            <element signature="e#3725#3726#0" expanded="false" />
+            <element signature="e#3772#3773#0" expanded="false" />
+            <element signature="e#3975#3976#0" expanded="false" />
+            <element signature="e#4020#4021#0" expanded="false" />
+            <element signature="e#4207#4208#0" expanded="false" />
+            <element signature="e#4244#4245#0" expanded="false" />
+            <element signature="e#4305#4306#0" expanded="false" />
+            <element signature="e#4357#4358#0" expanded="false" />
+            <element signature="e#4403#4404#0" expanded="false" />
+            <element signature="e#4444#4445#0" expanded="false" />
+            <element signature="e#4513#4514#0" expanded="false" />
+            <element signature="e#4573#4574#0" expanded="false" />
+            <element signature="e#4610#4611#0" expanded="false" />
+            <element signature="e#4642#4643#0" expanded="false" />
+            <element signature="e#4693#4694#0" expanded="false" />
+            <element signature="e#4735#4736#0" expanded="false" />
+            <element signature="e#4775#4776#0" expanded="false" />
+            <element signature="e#4810#4811#0" expanded="false" />
+            <element signature="e#4867#4868#0" expanded="false" />
+            <element signature="e#4915#4916#0" expanded="false" />
+            <element signature="e#4953#4954#0" expanded="false" />
+            <element signature="e#4986#4987#0" expanded="false" />
+            <element signature="e#5039#5040#0" expanded="false" />
+            <element signature="e#5083#5084#0" expanded="false" />
+            <element signature="e#5119#5120#0" expanded="false" />
+            <element signature="e#5153#5154#0" expanded="false" />
+            <element signature="e#5205#5206#0" expanded="false" />
+            <element signature="e#5251#5252#0" expanded="false" />
+            <element signature="e#5293#5294#0" expanded="false" />
+            <element signature="e#5330#5331#0" expanded="false" />
+            <element signature="e#5391#5392#0" expanded="false" />
+            <element signature="e#5443#5444#0" expanded="false" />
+            <element signature="e#5483#5484#0" expanded="false" />
+            <element signature="e#5521#5522#0" expanded="false" />
+            <element signature="e#5581#5582#0" expanded="false" />
+            <element signature="e#5635#5636#0" expanded="false" />
+            <element signature="e#5679#5680#0" expanded="false" />
+            <element signature="e#5718#5719#0" expanded="false" />
+            <element signature="e#5783#5784#0" expanded="false" />
+            <element signature="e#5839#5840#0" expanded="false" />
+            <element signature="e#5884#5885#0" expanded="false" />
+            <element signature="e#5924#5925#0" expanded="false" />
+            <element signature="e#5991#5992#0" expanded="false" />
+            <element signature="e#6049#6050#0" expanded="false" />
+            <element signature="e#6083#6084#0" expanded="false" />
+            <element signature="e#6112#6113#0" expanded="false" />
+            <element signature="e#6157#6158#0" expanded="false" />
+            <element signature="e#6193#6194#0" expanded="false" />
+            <element signature="e#6231#6232#0" expanded="false" />
+            <element signature="e#6264#6265#0" expanded="false" />
+            <element signature="e#6317#6318#0" expanded="false" />
+            <element signature="e#6361#6362#0" expanded="false" />
+            <element signature="e#6394#6395#0" expanded="false" />
+            <element signature="e#6423#6424#0" expanded="false" />
+            <element signature="e#6467#6468#0" expanded="false" />
+            <element signature="e#6503#6504#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/dal/data/SysParameterData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="208" column="5" lean-forward="false" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+          <folding>
+            <element signature="e#2242#2243#0" expanded="false" />
+            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#2498#2499#0" expanded="false" />
+            <element signature="e#2544#2545#0" expanded="false" />
+            <element signature="e#3359#3360#0" expanded="false" />
+            <element signature="e#3396#3397#0" expanded="false" />
+            <element signature="e#3457#3458#0" expanded="false" />
+            <element signature="e#3509#3510#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/SysParameterMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <marker date="1551882693668" expanded="true" signature="5298:5414" ph="select from sys_parameter" />
+            <marker date="1551882693668" expanded="true" signature="5514:5583" ph="select from sys_parameter" />
+            <marker date="1551882693668" expanded="true" signature="5724:5766" ph="select count... sys_parameter" />
+            <marker date="1551882693668" expanded="true" signature="5897:5966" ph="select from sys_parameter" />
+            <marker date="1551882693668" expanded="true" signature="6094:6181" ph="select from sys_parameter" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolBeLocked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewRecordDone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="144" column="12" lean-forward="false" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="117" column="30" lean-forward="false" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="116" column="62" lean-forward="false" selection-start-line="116" selection-start-column="62" selection-end-line="116" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/listener/pool/PoolNewSuccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/PoolRecordCharts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/ParticipantPoolCharts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/Pool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#2131#2132#0" expanded="true" />
+            <element signature="e#2185#2186#0" expanded="true" />
+            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="e#2427#2428#0" expanded="true" />
+            <element signature="e#2614#2615#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2876#2877#0" expanded="true" />
+            <element signature="e#2931#2932#0" expanded="true" />
+            <element signature="e#5064#5065#0" expanded="true" />
+            <element signature="e#5109#5110#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="e#5216#5217#0" expanded="true" />
+            <element signature="e#5602#5603#0" expanded="true" />
+            <element signature="e#5649#5650#0" expanded="true" />
+            <element signature="e#5710#5711#0" expanded="true" />
+            <element signature="e#5764#5765#0" expanded="true" />
+            <element signature="e#5804#5805#0" expanded="true" />
+            <element signature="e#5852#5853#0" expanded="true" />
+            <element signature="e#5912#5913#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
+            <element signature="e#7865#7866#0" expanded="true" />
+            <element signature="e#7929#7930#0" expanded="true" />
+            <element signature="e#7975#7976#0" expanded="true" />
+            <element signature="e#8044#8045#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/entity/AttributeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/business/common/processor/pool/PoolProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+          <folding>
+            <element signature="e#7713#7714#0" expanded="true" />
+            <element signature="e#7746#7747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

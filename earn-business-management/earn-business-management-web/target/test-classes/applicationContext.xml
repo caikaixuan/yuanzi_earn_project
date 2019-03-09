@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <import resource="spring-aspect.xml"/>
+    <import resource="spring-dubbo.xml"/>
+    <import resource="spring-mybatis.xml"/>
+    <import resource="spring-redis.xml"/>
+
+    <!-- freemarker 静态类的配置位置 -->
+    <bean id="freemarkerStatic"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:freemarkerStaticClass.properties"/>
+    </bean>
+
+    <!-- freemarker 静态类的解析配置 -->
+    <bean id="freemarkerStaticModels" class="com.ygbc.brain.common.utils.FreemarkerStaticUtils"
+          factory-method="getInstance">
+        <property name="staticModels" ref="freemarkerStatic"/>
+    </bean>
+
+    <!--开启注解功能 -->
+    <context:annotation-config/>
+
+    <!-- 扫描package，以完成Bean创建和自动依赖注入的功能 -->
+    <context:component-scan base-package="com.ygbc.brain.business,com.ygbc.brain.common"/>
+
+    <!--加载配置文件 -->
+    <bean id="propertyPlaceholderConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>file:${ENV_BRAIN}/env.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="propertiesUtil" class="com.ygbc.brain.common.utils.PropertiesUtils" init-method="load">
+        <property name="fileNames">
+            <array>
+                <value>file:${ENV_BRAIN}/env.properties</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean class="com.ygbc.brain.common.utils.EnumUtils" init-method="scan">
+        <property name="basePackage" value="com.ygbc.brain"/>
+    </bean>
+
+</beans>

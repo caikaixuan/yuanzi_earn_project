@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.AnswerRecordDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.AnswerRecordData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="answer_record_id" jdbcType="BIGINT" property="answerRecordId" />
+    <result column="user_pool_record_id" jdbcType="BIGINT" property="userPoolRecordId" />
+    <result column="pool_id" jdbcType="BIGINT" property="poolId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="question_id" jdbcType="BIGINT" property="questionId" />
+    <result column="answer" jdbcType="VARCHAR" property="answer" />
+    <result column="result" jdbcType="BIT" property="result" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, answer_record_id, user_pool_record_id, pool_id, user_id, question_id, result,
+    create_time, create_by, update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="answerRecordId != null">
+        answer_record_id = #{answerRecordId,jdbcType=BIGINT}
+      </if>
+      <if test="userPoolRecordId != null">
+        user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
+      </if>
+      <if test="poolId != null">
+        pool_id = #{poolId,jdbcType=BIGINT}
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT}
+      </if>
+      <if test="questionId != null">
+        question_id = #{questionId,jdbcType=BIGINT},
+      </if>
+      <if test="answer != null">
+        answer = #{answer,jdbcType=VARCHAR}
+      </if>
+      <if test="result != null">
+        result = #{result,jdbcType=BIT}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from answer_record
+    where answer_record_id = #{answerRecordId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from answer_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from answer_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from answer_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.AnswerRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(answer_record)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.AnswerRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(answer_record)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.AnswerRecordData">
+    $plugin.update(answer_record)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.AnswerRecordData">
+    $plugin.updateForce(answer_record)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.AnswerRecordData">
+    $plugin.delete(answer_record)
+  </delete>
+</mapper>

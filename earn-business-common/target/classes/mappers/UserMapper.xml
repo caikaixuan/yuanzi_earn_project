@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.UserDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.UserData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="password" jdbcType="VARCHAR" property="password"/>
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="telphone" jdbcType="VARCHAR" property="telphone" />
+    <result column="wechat" jdbcType="VARCHAR" property="wechat" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="sign_saying" jdbcType="VARCHAR" property="signSaying" />
+    <result column="head_sculpture_image_url" jdbcType="VARCHAR" property="headSculptureImageUrl" />
+    <result column="plan_rate" jdbcType="INTEGER" property="planRate" />
+    <result column="current_rate" jdbcType="INTEGER" property="currentRate" />
+    <result column="good_at" jdbcType="BIGINT" property="goodAt" />
+    <result column="interest_in" jdbcType="BIGINT" property="interestIn" />
+    <result column="can_invite" jdbcType="BIT" property="canInvite" />
+    <result column="invite_code" jdbcType="VARCHAR" property="inviteCode" />
+    <result column="invite_friend_num_limit" jdbcType="INTEGER" property="inviteFriendNumLimit" />
+    <result column="invited_friend_num" jdbcType="INTEGER" property="invitedFriendNum" />
+    <result column="is_invited" jdbcType="BIT" property="isInvited" />
+    <result column="invitor_user_id" jdbcType="BIGINT" property="invitorUserId" />
+    <result column="is_robot" jdbcType="BIT" property="isRobot" />
+    <result column="integration" jdbcType="INTEGER" property="integration" />
+    <result column="last_withdraw" jdbcType="TIMESTAMP" property="lastWithdraw" />
+    <result column="can_withdraw" jdbcType="BIT" property="canWithdraw" />
+    <result column="withdraw" jdbcType="DECIMAL" property="withdraw" />
+    <result column="gain" jdbcType="INTEGER" property="gain" />
+    <result column="last_week_gain" jdbcType="INTEGER" property="lastWeekGain" />
+    <result column="charge" jdbcType="DECIMAL" property="charge" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="rank" jdbcType="INTEGER" property="rank"/>
+    <result column="challenge_num" jdbcType="INTEGER" property="challengeNum"/>
+    <result column="success_num" jdbcType="INTEGER" property="successNum"/>
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, password, nick_name, telphone, wechat, qq, email, sign_saying, head_sculpture_image_url,
+    plan_rate, current_rate, good_at, interest_in, can_invite, invite_code, invite_friend_num_limit,
+    invited_friend_num, is_invited, invitor_user_id, is_robot, integration, last_withdraw,
+    can_withdraw, withdraw, gain, last_week_gain, charge, last_login_time, rank, challenge_num, success_num, status, create_time,
+    create_by, update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT}
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR}
+      </if>
+      <if test="nickName != null">
+        nick_name = #{nickName,jdbcType=VARCHAR}
+      </if>
+      <if test="telphone != null">
+        telphone = #{telphone,jdbcType=VARCHAR}
+      </if>
+      <if test="wechat != null">
+        wechat = #{wechat,jdbcType=VARCHAR}
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR}
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR}
+      </if>
+      <if test="signSaying != null">
+        sign_saying = #{signSaying,jdbcType=VARCHAR}
+      </if>
+      <if test="headSculptureImageUrl != null">
+        head_sculpture_image_url = #{headSculptureImageUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="planRate != null">
+        plan_rate = #{planRate,jdbcType=INTEGER}
+      </if>
+      <if test="currentRate != null">
+        current_rate = #{currentRate,jdbcType=INTEGER}
+      </if>
+      <if test="goodAt != null">
+        good_at = #{goodAt,jdbcType=BIGINT}
+      </if>
+      <if test="interestIn != null">
+        interest_in = #{interestIn,jdbcType=BIGINT}
+      </if>
+      <if test="canInvite != null">
+        can_invite = #{canInvite,jdbcType=BIT}
+      </if>
+      <if test="inviteCode != null">
+        invite_code = #{inviteCode,jdbcType=VARCHAR}
+      </if>
+      <if test="inviteFriendNumLimit != null">
+        invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
+      </if>
+      <if test="invitedFriendNum != null">
+        invited_friend_num = #{invitedFriendNum,jdbcType=INTEGER}
+      </if>
+      <if test="isInvited != null">
+        is_invited = #{isInvited,jdbcType=BIT}
+      </if>
+      <if test="invitorUserId != null">
+        invitor_user_id = #{invitorUserId,jdbcType=BIGINT}
+      </if>
+      <if test="isRobot != null">
+        is_robot = #{isRobot,jdbcType=BIT}
+      </if>
+      <if test="integration != null">
+        integration = #{integration,jdbcType=INTEGER}
+      </if>
+      <if test="lastWithdraw != null">
+        last_withdraw = #{lastWithdraw,jdbcType=DATE}
+      </if>
+      <if test="canWithdraw != null">
+        can_withdraw = #{canWithdraw,jdbcType=BIT}
+      </if>
+      <if test="withdraw != null">
+        withdraw = #{withdraw,jdbcType=DECIMAL}
+      </if>
+      <if test="gain != null">
+        gain = #{gain,jdbcType=INTEGER}
+      </if>
+      <if test="lastWeekGain != null">
+        last_week_gain = #{lastWeekGain,jdbcType=INTEGER}
+      </if>
+      <if test="charge != null">
+        charge = #{charge,jdbcType=DECIMAL}
+      </if>
+      <if test="lastLoginTime != null">
+        last_login_time = #{lastLoginTime,jdbcType=DATE}
+      </if>
+      <if test="rank != null">
+        rank = #{rank,jdbcType=INTEGER}
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from user
+    where user_id = #{userId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from user
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from user
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from user
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.UserData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(user)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.UserData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(user)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.UserData">
+    $plugin.update(user)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.UserData">
+    $plugin.updateForce(user)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.UserData">
+    $plugin.delete(user)
+  </delete>
+</mapper>

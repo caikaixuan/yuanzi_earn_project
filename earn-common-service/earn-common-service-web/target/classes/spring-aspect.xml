@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+    <!-- 日志切面类 -->
+    <bean id="logAspectBean" class="com.ygbc.brain.common.aspect.LogAspect"/>
+    <!-- 字段校验切面类 -->
+    <bean id="fieldValidAspectBean" class="com.ygbc.brain.common.aspect.FieldValidateAspect"/>
+    <!-- 登录token校验切面类 -->
+    <bean id="loginTokenValidAspectBean" class="com.ygbc.brain.common.aspect.LoginTokenValidateAspect">
+        <property name="redisSessionManager" ref="redisSessionManager"/>
+    </bean>
+
+    <!-- 第1步： AOP的配置 -->
+    <aop:config proxy-target-class="true">
+        <!-- 第2步：配置一个切面 -->
+        <aop:aspect id="facadeLogAspect" ref="logAspectBean">
+            <!-- 第3步：定义切入点,指定切入点表达式 -->
+            <aop:pointcut id="facadeMethod"
+                          expression="execution(* com.ygbc.brain.common.service.api.impl.*.*(..))"/>
+            <!-- 第4步：应用前置通知 -->
+            <aop:before method="before" pointcut-ref="facadeMethod"/>
+            <!-- 第4步：应用后置通知 -->
+            <aop:after-returning method="afterReturn" pointcut-ref="facadeMethod" arg-names="call,retValue"
+                                 returning="retValue"/>
+            <!-- 第4步：应用最终通知 -->
+            <!--<aop:after method="after" pointcut-ref="allMethod"/>-->
+            <!-- 第4步：应用抛出异常后通知 -->
+            <aop:after-throwing method="afterThrowing" pointcut-ref="facadeMethod" arg-names="call,ex" throwing="ex"/>
+            <!-- 第4步：应用环绕通知 -->
+            <!--
+            <aop:around method="doAround" pointcut-ref="allMethod" />
+             -->
+        </aop:aspect>
+
+        <aop:aspect id="serviceLogAspect" ref="logAspectBean">
+            <aop:pointcut id="serviceMethod"
+                          expression="execution(* com.ygbc.brain.common.service.*.*.*(..))"/>
+            <aop:after-throwing method="afterThrowing" pointcut-ref="serviceMethod" arg-names="call,ex" throwing="ex"/>
+        </aop:aspect>
+
+        <aop:aspect id="fieldValidAspect" ref="fieldValidAspectBean">
+            <aop:pointcut id="fieldValidMethod"
+                          expression="execution(* com.ygbc.brain.common.service.*.*.*(..))"/>
+            <aop:around method="around" pointcut-ref="fieldValidMethod" arg-names="pjp"/>
+        </aop:aspect>
+        <!--后期放开-->
+        <!--<aop:aspect id="loginTokenValidAspect" ref="loginTokenValidAspectBean">-->
+        <!--<aop:pointcut id="loginTokenValidMethod"-->
+        <!--expression="execution(* com.ygbc.brain.common.service.*.*.*(..))"/>-->
+        <!--<aop:around method="around" pointcut-ref="loginTokenValidMethod" arg-names="pjp"/>-->
+        <!--</aop:aspect>-->
+    </aop:config>
+</beans>

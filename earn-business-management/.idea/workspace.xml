@@ -1,0 +1,2079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11db5a97-d5fa-4584-8145-96d790d7120b" name="Default" comment="实现6个业务主表的基本操作：增删查改。&#10;6个业务主表：algorithm,experiment,experiment_algorithm,image,image_piece,experiment_record">
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/PoolServiceFacade.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/CreatePoolReqDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/DeletePoolReqDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/QueryPoolDetailReqDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/QueryPoolListReqDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/UpdatePoolReqDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/PoolModel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/PoolServiceFacadeImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/PoolDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/PoolData.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/resources/mappers/PoolMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/PoolController.java" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/pom.xml" afterPath="$PROJECT_DIR$/earn-business-management-api/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/AlgorithmServiceFacade.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/AlgorithmServiceFacade.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/ExperimentAlgorithmServiceFacade.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/ExperimentRecordServiceFacade.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/ExperimentServiceFacade.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/ImagePieceServiceFacade.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/ImageServiceFacade.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/CreateAlgorithmReqDTO.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/CreateAlgorithmReqDTO.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/DeleteAlgorithmReqDTO.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/DeleteAlgorithmReqDTO.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/QueryAlgorithmDetailReqDTO.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/QueryAlgorithmDetailReqDTO.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/QueryAlgorithmListReqDTO.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/QueryAlgorithmListReqDTO.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/UpdateAlgorithmReqDTO.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/algorithm/UpdateAlgorithmReqDTO.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experiment/CreateExperimentReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experiment/DeleteExperimentReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experiment/QueryExperimentDetailReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experiment/QueryExperimentListReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experiment/UpdateExperimentReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentAlgorithm/CreateExperimentAlgorithmReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentAlgorithm/DeleteExperimentAlgorithmReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentAlgorithm/QueryExperimentAlgorithmDetailReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentAlgorithm/QueryExperimentAlgorithmListReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentAlgorithm/UpdateExperimentAlgorithmReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentRecord/CreateExperimentRecordReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentRecord/DeleteExperimentRecordReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentRecord/QueryExperimentRecordDetailReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentRecord/QueryExperimentRecordListReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/experimentRecord/UpdateExperimentRecordReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/image/CreateImageReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/image/DeleteImageReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/image/QueryImageDetailReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/image/QueryImageListReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/image/UpdateImageReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/imagePiece/CreateImagePieceReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/imagePiece/DeleteImagePieceReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/imagePiece/QueryImagePieceDetailReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/imagePiece/QueryImagePieceListReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/imagePiece/UpdateImagePieceReqDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ExperimentRecordStatus.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ExperimentRecordStatus.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ExperimentStatus.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/PoolStatus.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ExperimentType.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ExperimentType.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ImageSceneType.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ImageSceneType.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/enums/ImageType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/AlgorithmModel.java" afterPath="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/AlgorithmModel.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ExperimentAlgorithmModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ExperimentModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ExperimentRecordModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ImageModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ImagePieceModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/pom.xml" afterPath="$PROJECT_DIR$/earn-business-management-service/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/AlgorithmServiceFacadeImpl.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/AlgorithmServiceFacadeImpl.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/ExperimentAlgorithmServiceFacadeImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/ExperimentRecordServiceFacadeImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/ExperimentServiceFacadeImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/ImagePieceServiceFacadeImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/ImageServiceFacadeImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/AlgorithmDao.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/AlgorithmDao.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/ExperimentAlgorithmDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/ExperimentDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/ExperimentRecordDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/ImageDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/dao/ImagePieceDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/AlgorithmData.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/AlgorithmData.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/Argument.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ExperimentAlgorithmData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ExperimentData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ExperimentRecordData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ImageData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ImagePieceData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmCreateService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmCreateService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmDeleteService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmDeleteService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmDetailService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmDetailService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmListService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmListService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmUpdateService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmUpdateService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentAlgorithmCreateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentAlgorithmDeleteService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentAlgorithmDetailService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentAlgorithmListService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentAlgorithmUpdateService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolUpdateService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentCreateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentDeleteService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentDetailService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentListService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentRecordCreateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentRecordDeleteService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentRecordDetailService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentRecordListService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentRecordUpdateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ExperimentUpdateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImageCreateService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolCreateService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImageDeleteService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolDeleteService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImageDetailService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolDetailService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImageListService.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolListService.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImagePieceCreateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImagePieceDeleteService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImagePieceDetailService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImagePieceListService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImagePieceUpdateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/ImageUpdateService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteAlgorithmValidator.java" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteAlgorithmValidator.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteExperimentAlgorithmValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteExperimentRecordValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteExperimentValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteImagePieceValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/validator/DeleteImageValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/AlgorithmMapper.xml" afterPath="$PROJECT_DIR$/earn-business-management-service/src/main/resources/mappers/AlgorithmMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/ExperimentAlgorithmMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/ExperimentMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/ExperimentRecordMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/ImageMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-service/src/main/resources/mappers/ImagePieceMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/pom.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/SwaggerConfig.java" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/SwaggerConfig.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/AlgorithmServiceController.java" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/AlgorithmServiceController.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/ExperimentAlgorithmServiceController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/ExperimentRecordServiceController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/ExperimentServiceController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/ImagePieceServiceController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/ImageServiceController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/env/env.properties" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/env/env.properties" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/freemarkerStaticClass.properties" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/freemarkerStaticClass.properties" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/jetty-context.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/jetty-context.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/log4j2.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/mybatis/mybatis-config.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/spring-aspect.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/spring-aspect.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/spring-dubbo.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/spring-dubbo.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/spring-mybatis.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/resources/spring-redis.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/resources/spring-redis.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/webapp/META-INF/context.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/webapp/WEB-INF/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/webapp/WEB-INF/springmvc-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/java/com/ygbc/brain/test/BaseTest.java" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/java/com/ygbc/brain/test/BaseTest.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/java/com/ygbc/brain/test/ExperimentControllerTest.java" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/java/com/ygbc/brain/test/ExperimentControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/document_template/ditopn_xyz.ftl" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/document_template/ditopn_xyz.ftl" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/env/env.properties" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/env/env.properties" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/freemarkerStaticClass.properties" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/freemarkerStaticClass.properties" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/jetty-context.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/jetty-context.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/log4j2.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/log4j2.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/mybatis/mybatis-config.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/spring-aspect.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/spring-aspect.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/spring-dubbo.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/spring-dubbo.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/spring-mybatis.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/resources/spring-redis.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/resources/spring-redis.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/webapp/META-INF/context.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/webapp/WEB-INF/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/webapp/WEB-INF/springmvc-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/brain-business-management-web/src/test/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/earn-business-management-web/src/test/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/brain-business-management-api/target/" />
+    <ignored path="$PROJECT_DIR$/brain-business-management-web/target/" />
+    <ignored path="$PROJECT_DIR$/brain-business-management-service/target/" />
+    <ignored path="$PROJECT_DIR$/earn-business-management-api/target/" />
+    <ignored path="$PROJECT_DIR$/earn-business-management-service/target/" />
+    <ignored path="$PROJECT_DIR$/earn-business-management-web/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PoolProcessor.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/processor/pool/PoolProcessor.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="142" column="22" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+              <folding>
+                <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1552111084000" expanded="false" signature="169:2067" ph="..." />
+                <marker date="1552111084000" expanded="true" signature="2576:2695" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="2576:3021" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="2576:3470" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="3500:3507" ph="{}" />
+                <marker date="1552111084000" expanded="true" signature="3552:3645" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="3681:4620" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="4653:4810" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="4842:5590" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="5826:5932" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="5967:6268" ph="{...}" />
+                <marker date="1552111084000" expanded="false" signature="6307:6318" ph=" { " />
+                <marker date="1552111084000" expanded="false" signature="6355:6361" ph=" }" />
+                <marker date="1552111084000" expanded="true" signature="6411:6568" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="6617:8759" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="8729:8759" ph="{...}" />
+                <marker date="1552111084000" expanded="false" signature="8798:8809" ph=" { " />
+                <marker date="1552111084000" expanded="false" signature="8827:8833" ph=" }" />
+                <marker date="1552111084000" expanded="true" signature="8875:8955" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="8926:8955" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="8992:9199" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="9239:9368" ph="{...}" />
+                <marker date="1552111084000" expanded="false" signature="9401:9412" ph=" { " />
+                <marker date="1552111084000" expanded="false" signature="9424:9430" ph=" }" />
+                <marker date="1552111084000" expanded="true" signature="9511:9651" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="9730:9783" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="9871:9946" ph="{...}" />
+                <marker date="1552111084000" expanded="true" signature="10037:10115" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunLotteryInAdvanceReqDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/RunLotteryInAdvanceReqDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetCurrentPoolsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetChallengeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetCurrentPoolService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/PoolController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-web/src/main/resources/log4j2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="105" lean-forward="false" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolServiceFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/PoolServiceFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="24" column="65" lean-forward="false" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolServiceFacadeImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/PoolServiceFacadeImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="20" />
+              <folding>
+                <element signature="e#3160#3161#0" expanded="true" />
+                <element signature="e#3187#3188#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunLotteryInAdvanceService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/RunLotteryInAdvanceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>@Transactional</find>
+      <find>算法</find>
+      <find>参与人排行</find>
+      <find>邀请码</find>
+      <find>充值记录</find>
+      <find>答题记录</find>
+      <find>问题</find>
+      <find>系统参数</find>
+      <find>话题</find>
+      <find>用户</find>
+      <find>奖池参与</find>
+      <find>奖池</find>
+      <find>bcfc</find>
+      <find>PoolProssor initing</find>
+      <find>com.ygbc.brain.business.management.listener.</find>
+      <find>com.ygbc.brain.business.common.listener.</find>
+      <find>com.ygbc.brain.business.common.processor.</find>
+      <find>management.processor</find>
+      <find>返回值</find>
+      <find>already</find>
+      <find>YesNo.YES.getValue()</find>
+      <find>EntityAttrsClearAspect is initing ...</find>
+      <find>record</find>
+      <find>date</find>
+      <find>run lottery</find>
+      <find>619668143802945536</find>
+      <find>619805109114638336</find>
+      <find>pool_record_chart</find>
+      <find>notify</find>
+      <find>621224270038568960</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>chargeRecord</replace>
+      <replace>participantPoolChart</replace>
+      <replace>question</replace>
+      <replace>userData</replace>
+      <replace>user</replace>
+      <replace>withdrawRecord</replace>
+      <replace>private JSONObject</replace>
+      <replace>Position</replace>
+      <replace>position</replace>
+      <replace>}</replace>
+      <replace>InviteNumber</replace>
+      <replace>inviteNumber</replace>
+      <replace>com.ygbc.brain.business.common.dal.data</replace>
+      <replace>答题记录</replace>
+      <replace>奖池</replace>
+      <replace>参与人排行</replace>
+      <replace>邀请码</replace>
+      <replace>充值记录</replace>
+      <replace>系统参数</replace>
+      <replace>话题</replace>
+      <replace>用户</replace>
+      <replace>奖池参与记录</replace>
+      <replace>提现</replace>
+      <replace>config</replace>
+      <replace>com.ygbc.brain.business.management.listener.</replace>
+      <replace>com.ygbc.brain.business.management.processor.</replace>
+      <replace>common.processor</replace>
+      <replace>TrueFalse.TRUE.getValue()</replace>
+      <replace>userPoolRecord</replace>
+      <replace>timestamp</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/answer_record</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/charge_record</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/participant_pool_chart</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/sys_parameter</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/topic</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/withdraw_record</dir>
+      <dir>$PROJECT_DIR$/earn-business-management-service</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/processor/pool/PoolProcessor.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/processor/sys_parameter/SysParameterProcessor.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-web/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolsService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/validator/QuestionValidator.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/sys_parameter/SysParameterDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/QuestionDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user/UserDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/answer_record/AnswerRecordDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/withdraw_record/WithdrawRecordDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/participant_pool_chart/ParticipantPoolChartDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/topic/TopicDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/invite_number/InviteNumberDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record/UserPoolRecordDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/charge_record/ChargeRecordDeleteService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/AnswerRecordModel.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/question/GetChallengeReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/user_pool_record/SubmitRecordResultReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/UserPoolRecordServiceFacade.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/UserPoolRecordServiceFacadeImpl.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/UserPoolRecordController.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record/SubmitRecordResultService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/SubmitResultService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/question/SubmitResultReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/SubmitAnswerResultService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/QuestionServiceFacade.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/QuestionServiceFacadeImpl.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ParticipantPoolChartModel.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/CreateParticipantPoolChartReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/UpdateParticipantPoolChartReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/QueryParticipantPoolChartListReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolCreateService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/resources/earn_sql_script/0.sql" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/CreatePoolReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/UpdatePoolReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/GetCurrentPoolReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/QueryPoolListReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/PoolModel.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/CreateSysParameterReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/SysParameterModel.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/UpdateSysParameterReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/RunLotteryInAdvanceReqDTO.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/PoolServiceFacade.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/PoolServiceFacadeImpl.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/RunLotteryInAdvanceService.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/PoolController.java" />
+        <option value="$PROJECT_DIR$/earn-business-management-web/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="earn-business-management" type="462c0819:PsiDirectoryNode" />
+              <item name="earn-business-management-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-business-common-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-business-common-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-business-common-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-business-common-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="earn-business-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: earn:earn-business-common:1.0.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="earn-business-common-1.0.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="brain" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="log4j2.xml&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/log4j2.xml&#10;poolpro&#9;FILE&#9;jar:///Users/kaixuan/.m2/repository/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/processor/pool/PoolProcessor.class&#10;su&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record/SubmitRecordResultService.java&#10;sub&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record/SubmitRecordResultService.java&#10;get&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java&#10;getch&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java&#10;0&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/resources/earn_sql_script/0.sql&#10;getc&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java&#10;submi&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/SubmitResultService.java&#10;aspect&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/spring-aspect.xml&#10;bus&#9;PSI&#9;JAVA://com.ygbc.brain.business.common.constants.BusinessConstants&#10;applica&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/applicationContext.xml&#10;myba&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/spring-mybatis.xml&#10;mybatis-&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/mybatis/mybatis-config.xml&#10;app&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/applicationContext.xml&#10;appli&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/applicationContext.xml&#10;application&#9;PSI&#9;JAVA://javafx.application.Application&#10;aspec&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/spring-aspect.xml&#10;Get&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java&#10;0.&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/resources/earn_sql_script/0.sql&#10;mybatis-con&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/mybatis/mybatis-config.xml&#10;chall&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/ChallengeService.java&#10;web.&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/webapp/WEB-INF/web.xml&#10;mybati&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/mybatis/mybatis-config.xml&#10;SPRIN&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/webapp/WEB-INF/springmvc-servlet.xml&#10;applicati&#9;FILE&#9;file:///Users/kaixuan/Documents/yuanzi_earn/earn/earn-business-management/earn-business-management-web/src/main/resources/applicationContext.xml&#10;spring&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/webapp/WEB-INF/springmvc-servlet.xml&#10;log4j2&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/log4j2.xml&#10;spring-&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/spring-aspect.xml&#10;log4j&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/log4j2.xml&#10;ImageData&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model/ImageData.java&#10;log4j.xm&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/log4j2.xml&#10;env.p&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/env/env.properties&#10;mybatis-confi&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/mybatis/mybatis-config.xml&#10;AlgorithmData&#9;PSI&#9;JAVA://com.ygbc.brain.business.management.dal.model.AlgorithmData&#10;AlgorithmListSer&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-service/src/main/java/com/ygbc/brain/business/management/service/AlgorithmListService.java&#10;MY&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/mybatis/mybatis-config.xml&#10;mybatis&#9;FILE&#9;file:///Users/kaixuan/IdeaProjects/brain-business-management/brain-business-management-web/src/main/resources/mybatis/mybatis-config.xml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ygbc.brain.business.management.service.pool" />
+      <recent name="com.ygbc.brain.business.management.api.enums" />
+      <recent name="com.ygbc.brain.business.management.api" />
+      <recent name="com.ygbc.brain.business.management.web.controller" />
+      <recent name="com.ygbc.brain.business.management.api.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management" />
+      <recent name="$PROJECT_DIR$/earn-business-management-web/src/main/resources/env" />
+      <recent name="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/invite_number" />
+      <recent name="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/dal/model" />
+      <recent name="$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/withdraw_record" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.run">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="brain-business-management-api" />
+      <envs />
+    </configuration>
+    <configuration name="build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/earn-business-management-web" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Maven.run" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.build" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11db5a97-d5fa-4584-8145-96d790d7120b" name="Default" comment="" />
+      <created>1541664008207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541664008207</updated>
+      <workItem from="1541664009660" duration="7613000" />
+      <workItem from="1541743835549" duration="1353000" />
+      <workItem from="1541749465601" duration="286000" />
+      <workItem from="1541988794258" duration="15645000" />
+      <workItem from="1542074906730" duration="1186000" />
+      <workItem from="1542076542071" duration="8918000" />
+      <workItem from="1543317314939" duration="13131000" />
+      <workItem from="1544751793461" duration="2399000" />
+      <workItem from="1544810605667" duration="174000" />
+      <workItem from="1544983751540" duration="1222000" />
+      <workItem from="1545489348769" duration="346000" />
+      <workItem from="1546396845116" duration="1915000" />
+      <workItem from="1546398943900" duration="75471000" />
+      <workItem from="1546650864249" duration="42514000" />
+      <workItem from="1546911785448" duration="28059000" />
+      <workItem from="1547089556650" duration="174000" />
+      <workItem from="1547181883559" duration="1602000" />
+      <workItem from="1547435748810" duration="693000" />
+      <workItem from="1547439439077" duration="21620000" />
+      <workItem from="1547806885642" duration="7180000" />
+      <workItem from="1548061796109" duration="1296000" />
+      <workItem from="1548063730986" duration="14122000" />
+      <workItem from="1548471133452" duration="75464000" />
+      <workItem from="1549735947718" duration="659000" />
+      <workItem from="1550198906271" duration="298000" />
+      <workItem from="1550199653899" duration="2436000" />
+      <workItem from="1550994617261" duration="11557000" />
+      <workItem from="1551098601189" duration="2152000" />
+      <workItem from="1551150415671" duration="3481000" />
+      <workItem from="1551182131963" duration="9046000" />
+      <workItem from="1551231426468" duration="2000" />
+      <workItem from="1551252784541" duration="99000" />
+      <workItem from="1551258266146" duration="217000" />
+      <workItem from="1551262928095" duration="7761000" />
+      <workItem from="1551359735153" duration="1456000" />
+      <workItem from="1551361371889" duration="3684000" />
+      <workItem from="1551404629034" duration="10111000" />
+      <workItem from="1551422902270" duration="54101000" />
+      <workItem from="1551695153663" duration="6090000" />
+      <workItem from="1551873960904" duration="5783000" />
+      <workItem from="1551922751537" duration="5000" />
+      <workItem from="1551959944875" duration="6103000" />
+      <workItem from="1552046233369" duration="4562000" />
+    </task>
+    <task id="LOCAL-00001" summary="实现6个业务主表的基本操作：增删查改。&#10;6个业务主表：algorithm,experiment,experiment_algorithm,image,image_piece,experiment_record">
+      <created>1546678331290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546678331290</updated>
+    </task>
+    <task id="LOCAL-00002" summary="实现6个业务主表的基本操作：增删查改。&#10;6个业务主表：algorithm,experiment,experiment_algorithm,image,image_piece,experiment_record">
+      <created>1546843849680</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546843849680</updated>
+    </task>
+    <task id="LOCAL-00003" summary="上一个提交，将此文件也提交。现在重新提交一次，将内容改为云端上一个版本">
+      <created>1546847417351</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546847417351</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.业务主表experiment_record增加一个status字段；&#10;2.更改一些不合适的函数名">
+      <created>1547718734369</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547718734369</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.experiment_record api 列表查询dto中添加status字段">
+      <created>1547776200159</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547776200159</updated>
+    </task>
+    <task id="LOCAL-00006" summary="解决springmvc-servlet.xml中配置mvc:message-converters失效的问题">
+      <created>1547788156457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547788156457</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1.将algorithm,experiment_algorithm表中的argument字段类型由JSONObject -&gt; JSONArray">
+      <created>1548037184774</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548037184774</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="459914000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28755364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5114873" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27932286" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2932761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="实现6个业务主表的基本操作：增删查改。&#10;6个业务主表：algorithm,experiment,experiment_algorithm,image,image_piece,experiment_record" />
+    <MESSAGE value="上一个提交，将此文件也提交。现在重新提交一次，将内容改为云端上一个版本" />
+    <MESSAGE value="1.业务主表experiment_record增加一个status字段；&#10;2.更改一些不合适的函数名" />
+    <MESSAGE value="1.experiment_record api 列表查询dto中添加status字段" />
+    <MESSAGE value="解决springmvc-servlet.xml中配置mvc:message-converters失效的问题" />
+    <MESSAGE value="1.将algorithm,experiment_algorithm表中的argument字段类型由JSONObject -&gt; JSONArray" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.将algorithm,experiment_algorithm表中的argument字段类型由JSONObject -&gt; JSONArray" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/brain/brain-common-utils/1.0.0-SNAPSHOT/brain-common-utils-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/common/utils/DeepBeanUtils.class</url>
+          <line>252</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="165" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>poolId == 619701234818879488L</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>poolId == 619668143802945536L</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>this.userPoolRecords.containsKey(userId)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.charts.contains(userId)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>!this.charts.contains(userId)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getEndTime().compareTo(new Date()) &gt;= 0</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new Date()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.currentTimeMillis()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>endTime</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getEndTime()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.currentTimeMillis() &lt;= endTime</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/QuestionServiceFacadeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="81" column="1" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/QuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/validator/QuestionValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/ParticipantPoolChartModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="101" column="38" lean-forward="false" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/DeleteParticipantPoolChartReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="61" lean-forward="true" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/answer_record/AnswerRecordCreateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/QueryParticipantPoolChartDetailReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/QueryParticipantPoolChartListReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/UpdateParticipantPoolChartReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/user_pool_record/SubmitRecordResultReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/participant_pool_chart/CreateParticipantPoolChartReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.6.RELEASE/spring-core-4.2.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/PoolCreateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/PoolRecordChart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/PoolRecordCharts.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/ParticipantPoolChart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/resources/earn_sql_script/0.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/CreatePoolReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4365">
+          <caret line="293" column="5" lean-forward="false" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/UpdatePoolReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="293" column="5" lean-forward="false" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/DeletePoolReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/GetCurrentPoolReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/GetCurrentPoolsReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/QueryPoolDetailReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/QueryPoolListReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1661#1662#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="false" />
+            <element signature="e#1778#1779#0" expanded="false" />
+            <element signature="e#1832#1833#0" expanded="false" />
+            <element signature="e#1881#1882#0" expanded="false" />
+            <element signature="e#2084#2085#0" expanded="false" />
+            <element signature="e#2121#2122#0" expanded="false" />
+            <element signature="e#2182#2183#0" expanded="false" />
+            <element signature="e#2234#2235#0" expanded="false" />
+            <element signature="e#2276#2277#0" expanded="false" />
+            <element signature="e#2313#2314#0" expanded="false" />
+            <element signature="e#2374#2375#0" expanded="false" />
+            <element signature="e#2426#2427#0" expanded="false" />
+            <element signature="e#2462#2463#0" expanded="false" />
+            <element signature="e#2493#2494#0" expanded="false" />
+            <element signature="e#2542#2543#0" expanded="false" />
+            <element signature="e#2582#2583#0" expanded="false" />
+            <element signature="e#2621#2622#0" expanded="false" />
+            <element signature="e#2655#2656#0" expanded="false" />
+            <element signature="e#2710#2711#0" expanded="false" />
+            <element signature="e#2756#2757#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2843#2844#0" expanded="false" />
+            <element signature="e#2912#2913#0" expanded="false" />
+            <element signature="e#2972#2973#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3081#3082#0" expanded="false" />
+            <element signature="e#3296#3297#0" expanded="false" />
+            <element signature="e#3333#3334#0" expanded="false" />
+            <element signature="e#3394#3395#0" expanded="false" />
+            <element signature="e#3446#3447#0" expanded="false" />
+            <element signature="e#3492#3493#0" expanded="false" />
+            <element signature="e#3533#3534#0" expanded="false" />
+            <element signature="e#3602#3603#0" expanded="false" />
+            <element signature="e#3662#3663#0" expanded="false" />
+            <element signature="e#3699#3700#0" expanded="false" />
+            <element signature="e#3731#3732#0" expanded="false" />
+            <element signature="e#3782#3783#0" expanded="false" />
+            <element signature="e#3824#3825#0" expanded="false" />
+            <element signature="e#3864#3865#0" expanded="false" />
+            <element signature="e#3899#3900#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#4004#4005#0" expanded="false" />
+            <element signature="e#4042#4043#0" expanded="false" />
+            <element signature="e#4075#4076#0" expanded="false" />
+            <element signature="e#4128#4129#0" expanded="false" />
+            <element signature="e#4172#4173#0" expanded="false" />
+            <element signature="e#4208#4209#0" expanded="false" />
+            <element signature="e#4242#4243#0" expanded="false" />
+            <element signature="e#4294#4295#0" expanded="false" />
+            <element signature="e#4340#4341#0" expanded="false" />
+            <element signature="e#4382#4383#0" expanded="false" />
+            <element signature="e#4419#4420#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
+            <element signature="e#4532#4533#0" expanded="false" />
+            <element signature="e#4572#4573#0" expanded="false" />
+            <element signature="e#4610#4611#0" expanded="false" />
+            <element signature="e#4670#4671#0" expanded="false" />
+            <element signature="e#4724#4725#0" expanded="false" />
+            <element signature="e#4768#4769#0" expanded="false" />
+            <element signature="e#4807#4808#0" expanded="false" />
+            <element signature="e#4872#4873#0" expanded="false" />
+            <element signature="e#4928#4929#0" expanded="false" />
+            <element signature="e#4973#4974#0" expanded="false" />
+            <element signature="e#5013#5014#0" expanded="false" />
+            <element signature="e#5080#5081#0" expanded="false" />
+            <element signature="e#5138#5139#0" expanded="false" />
+            <element signature="e#5172#5173#0" expanded="false" />
+            <element signature="e#5201#5202#0" expanded="false" />
+            <element signature="e#5246#5247#0" expanded="false" />
+            <element signature="e#5282#5283#0" expanded="false" />
+            <element signature="e#5320#5321#0" expanded="false" />
+            <element signature="e#5353#5354#0" expanded="false" />
+            <element signature="e#5406#5407#0" expanded="false" />
+            <element signature="e#5450#5451#0" expanded="false" />
+            <element signature="e#5483#5484#0" expanded="false" />
+            <element signature="e#5512#5513#0" expanded="false" />
+            <element signature="e#5556#5557#0" expanded="false" />
+            <element signature="e#5592#5593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/QuerySysParameterListReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/QuerySysParameterDetailReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/PoolModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="318" column="5" lean-forward="false" selection-start-line="318" selection-start-column="5" selection-end-line="318" selection-end-column="5" />
+          <folding>
+            <element signature="e#1838#1839#0" expanded="false" />
+            <element signature="e#1867#1868#0" expanded="false" />
+            <element signature="e#1909#1910#0" expanded="false" />
+            <element signature="e#1945#1946#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="false" />
+            <element signature="e#2026#2027#0" expanded="false" />
+            <element signature="e#2089#2090#0" expanded="false" />
+            <element signature="e#2143#2144#0" expanded="false" />
+            <element signature="e#2197#2198#0" expanded="false" />
+            <element signature="e#2246#2247#0" expanded="false" />
+            <element signature="e#2449#2450#0" expanded="false" />
+            <element signature="e#2486#2487#0" expanded="false" />
+            <element signature="e#2547#2548#0" expanded="false" />
+            <element signature="e#2599#2600#0" expanded="false" />
+            <element signature="e#2641#2642#0" expanded="false" />
+            <element signature="e#2678#2679#0" expanded="false" />
+            <element signature="e#2739#2740#0" expanded="false" />
+            <element signature="e#2791#2792#0" expanded="false" />
+            <element signature="e#2840#2841#0" expanded="false" />
+            <element signature="e#2884#2885#0" expanded="false" />
+            <element signature="e#3072#3073#0" expanded="false" />
+            <element signature="e#3114#3115#0" expanded="false" />
+            <element signature="e#3185#3186#0" expanded="false" />
+            <element signature="e#3247#3248#0" expanded="false" />
+            <element signature="e#3293#3294#0" expanded="false" />
+            <element signature="e#3334#3335#0" expanded="false" />
+            <element signature="e#3403#3404#0" expanded="false" />
+            <element signature="e#3463#3464#0" expanded="false" />
+            <element signature="e#3520#3521#0" expanded="false" />
+            <element signature="e#3572#3573#0" expanded="false" />
+            <element signature="e#3797#3798#0" expanded="false" />
+            <element signature="e#3844#3845#0" expanded="false" />
+            <element signature="e#4047#4048#0" expanded="false" />
+            <element signature="e#4092#4093#0" expanded="false" />
+            <element signature="e#4279#4280#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4377#4378#0" expanded="false" />
+            <element signature="e#4429#4430#0" expanded="false" />
+            <element signature="e#4475#4476#0" expanded="false" />
+            <element signature="e#4516#4517#0" expanded="false" />
+            <element signature="e#4585#4586#0" expanded="false" />
+            <element signature="e#4645#4646#0" expanded="false" />
+            <element signature="e#4682#4683#0" expanded="false" />
+            <element signature="e#4714#4715#0" expanded="false" />
+            <element signature="e#4765#4766#0" expanded="false" />
+            <element signature="e#4807#4808#0" expanded="false" />
+            <element signature="e#4847#4848#0" expanded="false" />
+            <element signature="e#4882#4883#0" expanded="false" />
+            <element signature="e#4939#4940#0" expanded="false" />
+            <element signature="e#4987#4988#0" expanded="false" />
+            <element signature="e#5025#5026#0" expanded="false" />
+            <element signature="e#5058#5059#0" expanded="false" />
+            <element signature="e#5111#5112#0" expanded="false" />
+            <element signature="e#5155#5156#0" expanded="false" />
+            <element signature="e#5191#5192#0" expanded="false" />
+            <element signature="e#5225#5226#0" expanded="false" />
+            <element signature="e#5277#5278#0" expanded="false" />
+            <element signature="e#5323#5324#0" expanded="false" />
+            <element signature="e#5365#5366#0" expanded="false" />
+            <element signature="e#5402#5403#0" expanded="false" />
+            <element signature="e#5463#5464#0" expanded="false" />
+            <element signature="e#5515#5516#0" expanded="false" />
+            <element signature="e#5555#5556#0" expanded="false" />
+            <element signature="e#5593#5594#0" expanded="false" />
+            <element signature="e#5653#5654#0" expanded="false" />
+            <element signature="e#5707#5708#0" expanded="false" />
+            <element signature="e#5751#5752#0" expanded="false" />
+            <element signature="e#5790#5791#0" expanded="false" />
+            <element signature="e#5855#5856#0" expanded="false" />
+            <element signature="e#5911#5912#0" expanded="false" />
+            <element signature="e#5956#5957#0" expanded="false" />
+            <element signature="e#5996#5997#0" expanded="false" />
+            <element signature="e#6063#6064#0" expanded="false" />
+            <element signature="e#6121#6122#0" expanded="false" />
+            <element signature="e#6155#6156#0" expanded="false" />
+            <element signature="e#6184#6185#0" expanded="false" />
+            <element signature="e#6229#6230#0" expanded="false" />
+            <element signature="e#6265#6266#0" expanded="false" />
+            <element signature="e#6303#6304#0" expanded="false" />
+            <element signature="e#6336#6337#0" expanded="false" />
+            <element signature="e#6389#6390#0" expanded="false" />
+            <element signature="e#6433#6434#0" expanded="false" />
+            <element signature="e#6466#6467#0" expanded="false" />
+            <element signature="e#6495#6496#0" expanded="false" />
+            <element signature="e#6539#6540#0" expanded="false" />
+            <element signature="e#6575#6576#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/CreateSysParameterReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="210" column="5" lean-forward="false" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
+          <folding>
+            <element signature="e#2307#2308#0" expanded="false" />
+            <element signature="e#2355#2356#0" expanded="false" />
+            <element signature="e#2563#2564#0" expanded="false" />
+            <element signature="e#2609#2610#0" expanded="false" />
+            <element signature="e#3424#3425#0" expanded="false" />
+            <element signature="e#3461#3462#0" expanded="false" />
+            <element signature="e#3522#3523#0" expanded="false" />
+            <element signature="e#3574#3575#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/model/SysParameterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="210" column="5" lean-forward="false" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
+          <folding>
+            <element signature="e#2293#2294#0" expanded="false" />
+            <element signature="e#2341#2342#0" expanded="false" />
+            <element signature="e#2549#2550#0" expanded="false" />
+            <element signature="e#2595#2596#0" expanded="false" />
+            <element signature="e#3410#3411#0" expanded="false" />
+            <element signature="e#3447#3448#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="false" />
+            <element signature="e#3560#3561#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/sys_parameter/SysParameterUpdateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/listener/Listeners.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/listener/pool/PoolNewRecordStart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/sys_parameter/UpdateSysParameterReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <element signature="e#1374#1375#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1436#1437#0" expanded="false" />
+            <element signature="e#2443#2444#0" expanded="false" />
+            <element signature="e#2491#2492#0" expanded="false" />
+            <element signature="e#2699#2700#0" expanded="false" />
+            <element signature="e#2745#2746#0" expanded="false" />
+            <element signature="e#3560#3561#0" expanded="false" />
+            <element signature="e#3597#3598#0" expanded="false" />
+            <element signature="e#3658#3659#0" expanded="false" />
+            <element signature="e#3710#3711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.6.RELEASE/spring-aop-4.2.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="473" column="0" lean-forward="false" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/UserPoolRecord.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/user_pool_record/SubmitRecordResultService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="144" column="12" lean-forward="false" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/listener/pool/PoolNewSuccess.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1552111084000" expanded="false" signature="168:866" ph="..." />
+            <marker date="1552111084000" expanded="true" signature="928:935" ph="{}" />
+            <marker date="1552111084000" expanded="true" signature="951:958" ph="{}" />
+            <marker date="1552111084000" expanded="true" signature="1011:1301" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="1400:2032" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="2141:2843" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/Pool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="411" column="0" lean-forward="false" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
+          <folding>
+            <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1552111084000" expanded="false" signature="161:470" ph="..." />
+            <marker date="1552111084000" expanded="true" signature="831:838" ph="{}" />
+            <marker date="1552111084000" expanded="false" signature="870:881" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="893:899" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="1061:1247" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="1276:1287" ph=" { " />
+            <marker date="1552111084000" expanded="true" signature="1328:1334" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="1374:1385" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1425:1431" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="1472:1483" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1533:1539" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="1601:1675" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="1727:1738" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1799:1805" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="1889:1985" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="2025:2036" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2085:2091" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="2155:2231" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="2271:2282" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2331:2337" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="2401:2477" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="2511:2522" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2524:2535" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2565:2571" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2591:2597" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2618:2629" ph=" { " />
+            <marker date="1552111084000" expanded="true" signature="2671:2757" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="2673:2679" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2716:2727" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2773:2779" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2802:2813" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2832:2843" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="2867:2873" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2893:2899" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="2943:2954" ph=" { " />
+            <marker date="1552111084000" expanded="true" signature="2943:3025" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="3007:3013" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="3075:3086" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="3145:3151" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="3231:3323" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="3371:3382" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="3439:3445" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="3521:3609" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="3653:3664" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="3717:3723" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="3791:4796" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="4852:4932" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="5022:5124" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="5164:5175" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="5224:5230" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="5289:5300" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="5356:5362" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="5406:5417" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="5470:5476" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="5544:5624" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="5659:5670" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="5714:5720" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="5769:5780" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="5826:5832" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="5870:5881" ph=" { " />
+            <marker date="1552111084000" expanded="true" signature="5928:5934" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="5989:6000" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6052:6058" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6094:6105" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6150:6156" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6203:6214" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6258:6264" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6298:6309" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6355:6361" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6407:6418" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6464:6470" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6510:6521" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6570:6576" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6635:6646" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6702:6708" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6746:6757" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6807:6813" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6871:6882" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6940:6946" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="6988:6999" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7050:7056" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="7120:7196" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="7239:7250" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7302:7308" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="7374:7452" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="7484:7495" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7536:7542" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="7585:7596" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7636:7642" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="7678:7689" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7734:7740" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="7791:7802" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7850:7856" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="7887:7898" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="7939:7945" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="7987:7998" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8038:8044" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="8095:8106" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8135:8141" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="8214:8316" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="8377:8388" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8422:8428" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="8516:8583" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="8648:8659" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8687:8693" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="8779:8834" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="8865:8876" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8895:8901" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="8944:8955" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8976:8982" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="9032:9043" ph=" { " />
+            <marker date="1552111084000" expanded="true" signature="9092:9098" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="13732:13738" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="13785:13989" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="14034:14215" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="14246:14747" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="14772:15027" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/entity/ParticipantPoolCharts.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1552111084000" expanded="false" signature="161:406" ph="..." />
+            <marker date="1552111084000" expanded="false" signature="686:697" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="714:720" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="747:758" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="775:781" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="817:828" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="845:851" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="902:913" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="932:938" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="1000:1011" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1032:1038" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="1069:1080" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1099:1105" ph=" }" />
+            <marker date="1552111084000" expanded="false" signature="1148:1159" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="1180:1186" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="1670:1783" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="1830:2627" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="2655:3287" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="3281:3287" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="3312:3628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/listener/pool/PoolNewRecordDone.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1552111084000" expanded="false" signature="168:392" ph="..." />
+            <marker date="1552111084000" expanded="true" signature="483:490" ph="{}" />
+            <marker date="1552111084000" expanded="true" signature="543:987" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="981:987" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/question/GetChallengeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/PoolServiceFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="65" lean-forward="false" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/api/impl/PoolServiceFacadeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="e#3160#3161#0" expanded="true" />
+            <element signature="e#3187#3188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/RunLotteryInAdvanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-web/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="105" lean-forward="false" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-web/src/main/java/com/ygbc/brain/business/management/web/controller/PoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-api/src/main/java/com/ygbc/brain/business/management/api/dto/pool/RunLotteryInAdvanceReqDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/earn/earn-business-common/1.0.0-SNAPSHOT/earn-business-common-1.0.0-SNAPSHOT.jar!/com/ygbc/brain/business/common/processor/pool/PoolProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="142" column="22" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+          <folding>
+            <marker date="1552111084000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1552111084000" expanded="false" signature="169:2067" ph="..." />
+            <marker date="1552111084000" expanded="true" signature="2576:2695" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="2576:3021" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="2576:3470" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="3500:3507" ph="{}" />
+            <marker date="1552111084000" expanded="true" signature="3552:3645" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="3681:4620" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="4653:4810" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="4842:5590" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="5826:5932" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="5967:6268" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="6307:6318" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="6355:6361" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="6411:6568" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="6617:8759" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="8729:8759" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="8798:8809" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="8827:8833" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="8875:8955" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="8926:8955" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="8992:9199" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="9239:9368" ph="{...}" />
+            <marker date="1552111084000" expanded="false" signature="9401:9412" ph=" { " />
+            <marker date="1552111084000" expanded="false" signature="9424:9430" ph=" }" />
+            <marker date="1552111084000" expanded="true" signature="9511:9651" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="9730:9783" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="9871:9946" ph="{...}" />
+            <marker date="1552111084000" expanded="true" signature="10037:10115" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/earn-business-management-service/src/main/java/com/ygbc/brain/business/management/service/pool/GetCurrentPoolService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>brain-business-management-web:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|earn-business-management-web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

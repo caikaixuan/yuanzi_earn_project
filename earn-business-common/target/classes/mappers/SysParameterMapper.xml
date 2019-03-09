@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.SysParameterDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.SysParameterData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="charge_exchange_rate" jdbcType="INTEGER" property="chargeExchangeRate" />
+    <result column="withdraw_exchange_rate" jdbcType="INTEGER" property="withdrawExchangeRate" />
+    <result column="pool_init_integration" jdbcType="INTEGER" property="poolInitIntegration" />
+    <result column="pool_init_participate_integration" jdbcType="INTEGER" property="poolInitParticipateIntegration" />
+    <result column="pool_plan_participation_rate" jdbcType="INTEGER" property="poolPlanParticipationRate" />
+    <result column="pool_plan_participant_rate" jdbcType="INTEGER" property="poolPlanParticipantRate" />
+    <result column="pool_integration_max" jdbcType="INTEGER" property="poolIntegrationMax" />
+    <result column="pool_integration_min" jdbcType="INTEGER" property="poolIntegrationMin" />
+    <result column="pool_need_meddle" jdbcType="BIT" property="poolNeedMeddle" />
+    <result column="pool_plan_period" jdbcType="INTEGER" property="poolPlanPeriod" />
+    <result column="user_plan_rate" jdbcType="INTEGER" property="userPlanRate" />
+    <result column="user_can_invite" jdbcType="BIT" property="userCanInvite" />
+    <result column="user_num_limit" jdbcType="INTEGER" property="userNumLimit" />
+    <result column="success_line" jdbcType="INTEGER" property="successLine" />
+    <result column="invite_friend_num_limit" jdbcType="INTEGER" property="inviteFriendNumLimit" />
+    <result column="app_version" jdbcType="INTEGER" property="appVersion" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, charge_exchange_rate, withdraw_exchange_rate, pool_init_integration, pool_init_participate_integration,
+    pool_plan_participation_rate, pool_plan_participant_rate, pool_integration_max, pool_integration_min,
+    pool_need_meddle, pool_plan_period,
+    user_plan_rate, user_can_invite, user_num_limit, success_line, invite_friend_num_limit, app_version, create_time,
+    create_by, update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="chargeExchangeRate != null">
+        charge_exchange_rate = #{chargeExchangeRate,jdbcType=INTEGER}
+      </if>
+      <if test="withdrawExchangeRate != null">
+        withdraw_exchange_rate = #{withdrawExchangeRate,jdbcType=INTEGER}
+      </if>
+      <if test="poolInitIntegration != null">
+        pool_init_integration = #{poolInitIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="poolInitParticipateIntegration != null">
+        pool_init_participate_integration = #{poolInitParticipateIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="poolPlanRate != null">
+        pool_plan_rate = #{poolPlanRate,jdbcType=INTEGER}
+      </if>
+      <if test="poolIntegrationMax != null">
+        pool_integration_max = #{poolIntegrationMax,jdbcType=INTEGER}
+      </if>
+      <if test="poolIntegrationMin != null">
+        pool_integration_min = #{poolIntegrationMin,jdbcType=INTEGER}
+      </if>
+      <if test="poolNeedMeddle != null">
+        pool_need_meddle = #{poolNeedMeddle,jdbcType=BIT}
+      </if>
+      <if test="poolPlanPeriod != null">
+        pool_plan_period = #{poolPlanPeriod,jdbcType=INTEGER}
+      </if>
+      <if test="userPlanRate != null">
+        user_plan_rate = #{userPlanRate,jdbcType=INTEGER}
+      </if>
+      <if test="userCanInvite != null">
+        user_can_invite = #{userCanInvite,jdbcType=BIT}
+      </if>
+      <if test="userNumLimit != null">
+        user_num_limit = #{userNumLimit,jdbcType=INTEGER}
+      </if>
+      <if test="successLine != null">
+        success_line = #{successLine,jdbcType=INTEGER}
+      </if>
+      <if test="inviteFriendNumLimit != null">
+        invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
+      </if>
+      <if test="appVersion != null">
+        app_version = #{appVersion,jdbcType=INTEGER}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from sys_parameter
+    where id = #{id,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from sys_parameter
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from sys_parameter
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from sys_parameter
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectOnlyOne" resultMap="BaseResultMap" parameterType="int">
+    select
+    <include refid="Base_Column_List"/>
+    from sys_parameter
+    where ver = 6
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.SysParameterData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(sys_parameter)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.SysParameterData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(sys_parameter)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.SysParameterData">
+    $plugin.update(sys_parameter)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.SysParameterData">
+    $plugin.updateForce(sys_parameter)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.SysParameterData">
+    $plugin.delete(sys_parameter)
+  </delete>
+</mapper>

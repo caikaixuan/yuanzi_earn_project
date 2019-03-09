@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.UserPoolRecordDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.UserPoolRecordData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_pool_record_id" jdbcType="BIGINT" property="userPoolRecordId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="pool_id" jdbcType="BIGINT" property="poolId" />
+    <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
+    <result column="consume_integration" jdbcType="VARCHAR" property="consumeIntegration" />
+    <result column="right_num" jdbcType="INTEGER" property="rightNum" />
+    <result column="result" jdbcType="BIT" property="result" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_pool_record_id, user_id, pool_id, user_nick_name, consume_integration, right_num, result, status,
+    create_time, create_by, update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="userPoolRecordId != null">
+        user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT}
+      </if>
+      <if test="poolId != null">
+        pool_id = #{poolId,jdbcType=BIGINT}
+      </if>
+      <if test="userNickName != null">
+        user_nick_name = #{userNickName,jdbcType=VARCHAR}
+      </if>
+      <if test="rightNum != null">
+        right_num = #{rightNum,jdbcType=INTEGER}
+      </if>
+      <if test="consumeIntegration != null">
+        consume_integration = #{consumeIntegration,jdbcType=VARCHAR}
+      </if>
+      <if test="result != null">
+        result = #{result,jdbcType=BIT}
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from user_pool_record
+    where user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from user_pool_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from user_pool_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from user_pool_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.UserPoolRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(user_pool_record)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.UserPoolRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(user_pool_record)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.UserPoolRecordData">
+    $plugin.update(user_pool_record)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.UserPoolRecordData">
+    $plugin.updateForce(user_pool_record)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.UserPoolRecordData">
+    $plugin.delete(user_pool_record)
+  </delete>
+</mapper>

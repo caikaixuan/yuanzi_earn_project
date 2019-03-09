@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.PoolDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.PoolData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="pool_id" jdbcType="BIGINT" property="poolId" />
+    <result column="init_integration" jdbcType="INTEGER" property="initIntegration" />
+    <result column="init_participate_integration" jdbcType="INTEGER" property="initParticipateIntegration" />
+    <result column="integration_max" jdbcType="INTEGER" property="integrationMax" />
+    <result column="integration_min" jdbcType="INTEGER" property="integrationMin" />
+    <result column="plan_participation_rate" jdbcType="INTEGER" property="planParticipationRate" />
+    <result column="plan_participant_rate" jdbcType="INTEGER" property="planParticipantRate" />
+    <result column="current_participation_rate" jdbcType="INTEGER" property="currentParticipationRate" />
+    <result column="current_participant_rate" jdbcType="INTEGER" property="currentParticipantRate" />
+    <result column="current_integration" jdbcType="INTEGER" property="currentIntegration" />
+    <result column="current_participate_integration" jdbcType="INTEGER" property="currentParticipateIntegration" />
+    <result column="participant_num" jdbcType="INTEGER" property="participantNum" />
+    <result column="participation_times" jdbcType="INTEGER" property="participationTimes" />
+    <result column="winner_num" jdbcType="INTEGER" property="winnerNum" />
+    <result column="success_times" jdbcType="INTEGER" property="successTimes" />
+    <result column="plan_period" jdbcType="INTEGER" property="planPeriod" />
+    <result column="plan_end_time" jdbcType="TIMESTAMP" property="planEndTime" />
+    <result column="actually_period" jdbcType="INTEGER" property="actuallyPeriod" />
+    <result column="actually_end_time" jdbcType="TIMESTAMP" property="actuallyEndTime" />
+    <result column="award_integration" jdbcType="INTEGER" property="awardIntegration" />
+    <result column="profit_integration" jdbcType="INTEGER" property="profitIntegration" />
+    <result column="is_earn" jdbcType="BIT" property="isEarn" />
+    <result column="need_meddle" jdbcType="BIT" property="needMeddle" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, pool_id, init_integration, init_participate_integration, integration_max, integration_min,
+    plan_participation_rate, plan_participant_rate, current_participation_rate,
+    current_participant_rate, current_integration,
+    current_participate_integration, participant_num,
+    participation_times, winner_num, success_times, plan_period, plan_end_time, actually_period,
+    actually_end_time,award_integration, profit_integration,is_earn, need_meddle, status,
+    create_time, create_by, update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT}
+      </if>
+      <if test="poolId != null">
+        pool_id = #{poolId,jdbcType=BIGINT}
+      </if>
+      <if test="initIntegration != null">
+        init_integration = #{initIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="initParticipateIntegration != null">
+        init_participate_integration = #{initParticipateIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="integrationMax != null">
+        integration_max = #{integrationMax,jdbcType=INTEGER}
+      </if>
+      <if test="integrationMin != null">
+        integration_min = #{integrationMin,jdbcType=INTEGER}
+      </if>
+      <if test="planRate != null">
+        plan_rate = #{planRate,jdbcType=INTEGER}
+      </if>
+      <if test="currentRate != null">
+        current_rate = #{currentRate,jdbcType=INTEGER}
+      </if>
+      <if test="currentIntegration != null">
+        current_integration = #{currentIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="currentParticipateIntegration != null">
+        current_participate_integration = #{currentParticipateIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="participantNum != null">
+        participant_num = #{participantNum,jdbcType=INTEGER}
+      </if>
+      <if test="participationTimes != null">
+        participation_times = #{participationTimes,jdbcType=INTEGER},
+      </if>
+      <if test="winnerNum != null">
+        winner_num = #{winnerNum,jdbcType=INTEGER}
+      </if>
+      <if test="successTimes != null">
+        success_times = #{successTimes,jdbcType=INTEGER},
+      </if>
+      <if test="planPeriod != null">
+        plan_period = #{planPeriod,jdbcType=INTEGER}
+      </if>
+      <if test="planEndTime != null">
+        plan_end_time = #{planEndTime,jdbcType=DATE}
+      </if>
+      <if test="actuallyPeriod != null">
+        actually_period = #{actuallyPeriod,jdbcType=INTEGER}
+      </if>
+      <if test="actuallyEndTime != null">
+        actually_end_time = #{actuallyEndTime,jdbcType=DATE}
+      </if>
+      <if test="awardIntegration != null">
+        award_integration = #{awardIntegration,jdbcType=INTEGER},
+      </if>
+      <if test="profitIntegration != null">
+        profit_integration = #{profitIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="isEarn != null">
+        is_earn = #{isEarn,jdbcType=BIT}
+      </if>
+      <if test="needMeddle != null">
+        need_meddle = #{needMeddle,jdbcType=BIT}
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from pool
+    where pool_id = #{poolId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from pool
+    <include refid="SQL_FILTER"/>
+  </select>
+
+
+  <select id="selectCountToBeDone" resultType="java.lang.Integer">
+    select
+    count(1)
+    from pool
+    <where>
+      status = "C" OR status = "O"
+    </where>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from pool
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectPoolToBeDone" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from pool
+    <where>
+      status = "C" OR status = "O"
+    </where>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from pool
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.PoolData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(pool)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.PoolData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(pool)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.PoolData">
+    $plugin.update(pool)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.PoolData">
+    $plugin.updateForce(pool)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.PoolData">
+    $plugin.delete(pool)
+  </delete>
+</mapper>

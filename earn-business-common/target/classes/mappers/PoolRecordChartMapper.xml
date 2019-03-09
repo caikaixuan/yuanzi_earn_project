@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.PoolRecordChartDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.PoolRecordChartData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="pool_record_chart_id" jdbcType="BIGINT" property="poolRecordChartId" />
+    <result column="user_pool_record_id" jdbcType="BIGINT" property="userPoolRecordId" />
+    <result column="pool_id" jdbcType="BIGINT" property="poolId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
+    <result column="right_num" jdbcType="INTEGER" property="rightNum" />
+    <result column="grade" jdbcType="INTEGER" property="grade" />
+    <result column="position" jdbcType="INTEGER" property="position" />
+    <result column="award_level" jdbcType="INTEGER" property="awardLevel" />
+    <result column="award_integration" jdbcType="INTEGER" property="awardIntegration" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, pool_record_chart_id, user_pool_record_id, pool_id, user_id, user_nick_name,
+    right_num, grade, position, award_level, award_integration, status, create_time, create_by,
+    update_time, update_by, ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+      <if test="poolRecordChartId != null">
+        pool_record_chart_id = #{poolRecordChartId,jdbcType=BIGINT}
+      </if>
+      <if test="userPoolRecordId != null">
+        user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
+      </if>
+      <if test="poolId != null">
+        pool_id = #{poolId,jdbcType=BIGINT}
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT}
+      </if>
+      <if test="userNickName != null">
+        user_nick_name = #{userNickName,jdbcType=VARCHAR}
+      </if>
+      <if test="rightNum != null">
+        right_num = #{rightNum,jdbcType=INTEGER}
+      </if>
+      <if test="grade != null">
+        grade = #{grade,jdbcType=INTEGER}
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=INTEGER}
+      </if>
+      <if test="awardLevel != null">
+        award_level = #{awardLevel,jdbcType=INTEGER}
+      </if>
+      <if test="awardIntegration != null">
+        award_integration = #{awardIntegration,jdbcType=INTEGER}
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR}
+      </if>
+      <if test="ver != null">
+        ver = #{ver,jdbcType=INTEGER}
+      </if>
+      <if test="isDel != null">
+        is_del = #{isDel,jdbcType=BIT}
+      </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from pool_record_chart
+    where pool_record_chart_id = #{poolRecordChartId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from pool_record_chart
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from pool_record_chart
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from pool_record_chart
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.PoolRecordChartData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(pool_record_chart)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.PoolRecordChartData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(pool_record_chart)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.PoolRecordChartData">
+    $plugin.update(pool_record_chart)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.PoolRecordChartData">
+    $plugin.updateForce(pool_record_chart)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.PoolRecordChartData">
+    $plugin.delete(pool_record_chart)
+  </delete>
+</mapper>

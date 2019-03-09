@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ygbc.brain.business.common.dal.dao.ChargeRecordDao">
+  <resultMap id="BaseResultMap" type="com.ygbc.brain.business.common.dal.data.ChargeRecordData">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="charge_record_id" jdbcType="BIGINT" property="chargeRecordId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+    <result column="channel" jdbcType="VARCHAR" property="channel" />
+    <result column="get_integration" jdbcType="INTEGER" property="getIntegration" />
+    <result column="before_charge_integration" jdbcType="INTEGER" property="beforeChargeIntegration" />
+    <result column="after_charge_integration" jdbcType="INTEGER" property="afterChargeIntegration" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="ver" jdbcType="INTEGER" property="ver" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+      id, charge_record_id, user_id, balance, channel, get_integration, before_charge_integration,
+      after_charge_integration, status, create_time, create_by, update_time, update_by,
+      ver, is_del
+  </sql>
+
+  <sql id="SQL_FILTER">
+    <where>
+        <if test="chargeRecordId != null">
+            charge_record_id = #{chargeRecordId,jdbcType=BIGINT}
+        </if>
+        <if test="userId != null">
+            user_id = #{userId,jdbcType=BIGINT}
+        </if>
+        <if test="balance != null">
+            balance = #{balance,jdbcType=DECIMAL}
+        </if>
+        <if test="channel != null">
+            channel = #{channel,jdbcType=VARCHAR}
+        </if>
+        <if test="getIntegration != null">
+            get_integration = #{getIntegration,jdbcType=INTEGER}
+        </if>
+        <if test="beforeChargeIntegration != null">
+            before_charge_integration = #{beforeChargeIntegration,jdbcType=INTEGER}
+        </if>
+        <if test="afterChargeIntegration != null">
+            after_charge_integration = #{afterChargeIntegration,jdbcType=INTEGER}
+        </if>
+        <if test="status != null">
+            status = #{status,jdbcType=VARCHAR}
+        </if>
+        <if test="createTime != null">
+            create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="createBy != null">
+            create_by = #{createBy,jdbcType=VARCHAR}
+        </if>
+        <if test="updateTime != null">
+            update_time = #{updateTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR}
+        </if>
+        <if test="ver != null">
+            ver = #{ver,jdbcType=INTEGER}
+        </if>
+        <if test="isDel != null">
+            is_del = #{isDel,jdbcType=BIT}
+        </if>
+      and 1 = 1
+    </where>
+  </sql>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from charge_record
+    where charge_record_id = #{chargeRecordId,jdbcType=BIGINT} and 1 = 1
+  </select>
+
+  <select id="selectOne" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from charge_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+    select
+    count(1)
+    from charge_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    <include refid="Base_Column_List"/>
+    from charge_record
+    <include refid="SQL_FILTER"/>
+  </select>
+
+  <insert id="insert" parameterType="com.ygbc.brain.business.common.dal.data.ChargeRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insert(charge_record)
+  </insert>
+
+  <insert id="insertForce" parameterType="com.ygbc.brain.business.common.dal.data.ChargeRecordData"
+          useGeneratedKeys="true" keyProperty="id">
+    $plugin.insertForce(charge_record)
+  </insert>
+
+  <update id="update" parameterType="com.ygbc.brain.business.common.dal.data.ChargeRecordData">
+    $plugin.update(charge_record)
+  </update>
+
+  <update id="updateForce" parameterType="com.ygbc.brain.business.common.dal.data.ChargeRecordData">
+    $plugin.updateForce(charge_record)
+  </update>
+
+  <delete id="delete" parameterType="com.ygbc.brain.business.common.dal.data.ChargeRecordData">
+    $plugin.delete(charge_record)
+  </delete>
+</mapper>

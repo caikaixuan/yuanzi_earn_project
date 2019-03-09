@@ -1,0 +1,22 @@
+2018-11-13 10:55:13,347:INFO main (ContextLoader.java:305) - Root WebApplicationContext: initialization started
+2018-11-13 10:55:13,413:INFO main (AbstractApplicationContext.java:578) - Refreshing Root WebApplicationContext: startup date [Tue Nov 13 10:55:13 CST 2018]; root of context hierarchy
+2018-11-13 10:55:13,442:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-11-13 10:55:13,572:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-aspect.xml]
+2018-11-13 10:55:13,626:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-dubbo.xml]
+2018-11-13 10:55:13,683:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-11-13 10:55:13,723:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-redis.xml]
+2018-11-13 10:55:13,987:INFO main (PropertiesLoaderSupport.java:172) - Loading properties file from URL [file:/Users/kaixuan/IdeaProjects/brain-authorization/brain-authorization-web/src/main/resources/env/env.properties]
+2018-11-13 10:55:13,993:INFO main (AutowiredAnnotationBeanPostProcessor.java:153) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-11-13 10:55:16,025:INFO main (ContextLoader.java:345) - Root WebApplicationContext: initialization completed in 2677 ms
+2018-11-13 10:55:16,072:INFO main (FrameworkServlet.java:487) - FrameworkServlet 'springmvc': initialization started
+2018-11-13 10:55:16,075:INFO main (AbstractApplicationContext.java:578) - Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Tue Nov 13 10:55:16 CST 2018]; parent: Root WebApplicationContext
+2018-11-13 10:55:16,076:INFO main (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from ServletContext resource [/WEB-INF/springmvc-servlet.xml]
+2018-11-13 10:55:16,147:INFO main (PropertiesLoaderSupport.java:172) - Loading properties file from URL [file:/Users/kaixuan/IdeaProjects/brain-authorization/brain-authorization-web/src/main/resources/env/env.properties]
+2018-11-13 10:55:16,149:INFO main (AutowiredAnnotationBeanPostProcessor.java:153) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-11-13 10:55:16,369:INFO main (AbstractHandlerMethodMapping.java:534) - Mapped "{[/authorization/login],methods=[POST]}" onto public com.ygbc.brain.base.rpc.Resp<com.ygbc.brain.authorization.api.dto.LoginRespDTO> com.ygbc.brain.authorization.web.controller.AuthorController.login(com.ygbc.brain.base.rpc.Req<com.ygbc.brain.authorization.api.dto.LoginReqDTO>)
+2018-11-13 10:55:16,372:INFO main (AbstractHandlerMethodMapping.java:534) - Mapped "{[/authorization/logout],methods=[POST]}" onto public com.ygbc.brain.base.rpc.Resp com.ygbc.brain.authorization.web.controller.AuthorController.logout(com.ygbc.brain.base.rpc.Req)
+2018-11-13 10:55:16,373:INFO main (AbstractHandlerMethodMapping.java:534) - Mapped "{[/authorization/loadUser],methods=[POST]}" onto public com.ygbc.brain.base.rpc.Resp<com.ygbc.brain.authorization.api.dto.LoadUserRespDTO> com.ygbc.brain.authorization.web.controller.AuthorController.loadUser(com.ygbc.brain.base.rpc.Req)
+2018-11-13 10:55:16,642:INFO main (RequestMappingHandlerAdapter.java:539) - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Tue Nov 13 10:55:16 CST 2018]; parent: Root WebApplicationContext
+2018-11-13 10:55:16,679:INFO main (RequestMappingHandlerAdapter.java:539) - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springmvc-servlet': startup date [Tue Nov 13 10:55:16 CST 2018]; parent: Root WebApplicationContext
+2018-11-13 10:55:16,724:INFO main (AbstractUrlHandlerMapping.java:341) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-11-13 10:55:16,769:INFO main (FrameworkServlet.java:506) - FrameworkServlet 'springmvc': initialization completed in 696 ms

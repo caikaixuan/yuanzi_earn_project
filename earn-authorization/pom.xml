@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>earn</groupId>
+        <artifactId>earn-pom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>earn-authorization</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <earn.authorization.api.version>1.0.0-SNAPSHOT</earn.authorization.api.version>
+        <earn.authorization.service.version>1.0.0-SNAPSHOT</earn.authorization.service.version>
+        <earn.authorization.web.version>1.0.0-SNAPSHOT</earn.authorization.web.version>
+    </properties>
+
+    <modules>
+        <module>earn-authorization-api</module>
+        <module>earn-authorization-service</module>
+        <module>earn-authorization-web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-base-object</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-common-utils</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-business-common</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-authorization-api</artifactId>
+                <version>${earn.authorization.api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-authorization-service</artifactId>
+                <version>${earn.authorization.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>earn</groupId>
+                <artifactId>earn-authorization-web</artifactId>
+                <version>${earn.authorization.web.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

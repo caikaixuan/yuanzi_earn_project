@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/earn-authorization.iml" filepath="$PROJECT_DIR$/.idea/earn-authorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-authorization-api/earn-authorization-api.iml" filepath="$PROJECT_DIR$/earn-authorization-api/earn-authorization-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-authorization-service/earn-authorization-service.iml" filepath="$PROJECT_DIR$/earn-authorization-service/earn-authorization-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earn-authorization-web/earn-authorization-web.iml" filepath="$PROJECT_DIR$/earn-authorization-web/earn-authorization-web.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="brain-business-management-api" />
+        <module name="brain-business-management-service" />
+        <module name="brain-business-management-web" />
+        <module name="earn-business-management-api" />
+        <module name="earn-business-management-service" />
+        <module name="earn-business-management-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="brain-business-management" target="1.7" />
+      <module name="brain-business-management-api" target="1.7" />
+      <module name="brain-business-management-service" target="1.8" />
+      <module name="brain-business-management-web" target="1.7" />
+      <module name="earn-business-management" target="1.7" />
+      <module name="earn-business-management-api" target="1.7" />
+      <module name="earn-business-management-service" target="1.8" />
+      <module name="earn-business-management-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
