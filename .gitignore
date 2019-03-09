@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+/earn-authorization/earn-authorization-api/target/
+/earn-authorization/earn-authorization-service/target/
+/earn-authorization/earn-authorization-web/target/
+/earn-authorization/logs/
+/earn-base-object/target/
+/earn-business-common/target/
+/earn-business-management/earn-business-management-api/target/
+/earn-business-management/earn-business-management-service/target/
+/earn-business-management/earn-business-management-web/target/
+/earn-business-management/logs/
+/earn-common-service/earn-common-service-api/target/
+/earn-common-service/earn-common-service-service/target/
+/earn-common-service/earn-common-service-web/target/
+/earn-common-utils/target/
+/earn-helper/target/
