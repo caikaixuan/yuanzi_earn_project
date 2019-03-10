@@ -90,6 +90,11 @@ public class PoolServiceFacadeImpl implements PoolServiceFacade {
 
     @Override
     public Resp runLotteryInAdvance(Req<RunLotteryInAdvanceReqDTO> req) {
-        return null;
+        RunLotteryInAdvanceService service = SpringUtils.getBean(RunLotteryInAdvanceService.class);
+        try {
+            return service.execute(req);
+        } catch (Exception e) {
+            return exceptionHandler.handleException(e);
+        }
     }
 }

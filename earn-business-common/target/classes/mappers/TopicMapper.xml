@@ -21,31 +21,31 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="topicId != null">
-        topic_id = #{topicId,jdbcType=BIGINT}
+        and topic_id = #{topicId,jdbcType=BIGINT}
       </if>
       <if test="name != null">
-        name = #{name,jdbcType=VARCHAR}
+        and name = #{name,jdbcType=VARCHAR}
       </if>
       <if test="description != null">
-        description = #{description,jdbcType=VARCHAR}
+        and description = #{description,jdbcType=VARCHAR}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

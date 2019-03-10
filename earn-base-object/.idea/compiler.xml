@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="brain-base-object" />
+        <module name="earn-base-object" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="brain-base-object" target="1.7" />
+      <module name="earn-base-object" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

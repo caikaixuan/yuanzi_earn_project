@@ -25,43 +25,43 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="answerRecordId != null">
-        answer_record_id = #{answerRecordId,jdbcType=BIGINT}
+        and answer_record_id = #{answerRecordId,jdbcType=BIGINT}
       </if>
       <if test="userPoolRecordId != null">
-        user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
+        and user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
       </if>
       <if test="poolId != null">
-        pool_id = #{poolId,jdbcType=BIGINT}
+        and pool_id = #{poolId,jdbcType=BIGINT}
       </if>
       <if test="userId != null">
-        user_id = #{userId,jdbcType=BIGINT}
+        and user_id = #{userId,jdbcType=BIGINT}
       </if>
       <if test="questionId != null">
-        question_id = #{questionId,jdbcType=BIGINT},
+        and question_id = #{questionId,jdbcType=BIGINT},
       </if>
       <if test="answer != null">
-        answer = #{answer,jdbcType=VARCHAR}
+        and answer = #{answer,jdbcType=VARCHAR}
       </if>
       <if test="result != null">
-        result = #{result,jdbcType=BIT}
+        and result = #{result,jdbcType=BIT}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

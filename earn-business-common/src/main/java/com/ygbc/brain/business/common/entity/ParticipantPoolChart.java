@@ -95,11 +95,11 @@ public class ParticipantPoolChart extends AttributeEntity<ParticipantPoolChart, 
         data.setStatus(status);
     }
 
-    public void save(){
-        if(data != null){
-            if(data.getId() != null){
+    public void save() {
+        if (data != null) {
+            if (data.getId() != null) {
                 Platform.sdbUpdate(data);
-            }else{
+            } else {
                 Platform.sdbInsert(data);
             }
         }
@@ -108,16 +108,23 @@ public class ParticipantPoolChart extends AttributeEntity<ParticipantPoolChart, 
     @Override
     public int compareTo(ParticipantPoolChart o) {
         int result;
-        if(this.getPosition() != null && o.getPosition() != null){
-            if ((result = Integer.compare(o.getPosition(),this.getPosition())) != 0) {
+        if (this.getPosition() != null && o.getPosition() != null) {
+            if ((result = Integer.compare(o.getPosition(), this.getPosition())) != 0) {
                 return result;
             }
         }
-        if(this.getEarnings() != null && o.getEarnings() != null){
-            if ((result = Integer.compare(o.getEarnings(),this.getEarnings())) != 0) {
+        if (this.getEarnings() != null && o.getEarnings() != null) {
+            if ((result = Integer.compare(o.getEarnings(), this.getEarnings())) != 0) {
                 return result;
             }
         }
-        return o.getCreateTime().compareTo(this.getCreateTime());
+        return this.getCreateTime().compareTo(o.getCreateTime());
+    }
+
+    @Override
+    public String toString() {
+        return "奖池ID:" + this.getPoolId() + " 挑战者排名ID:" + this.getParticipantPoolChartId() + " 用户ID:" + this.getUserId() + " 用户名:【" + this
+                .getUserNickName() + "】 参与次数:" + this.getParticipateTimes() + " 成功次数:" + this.getSuccessTimes() + " 奖励:" + this
+                .getEarnings() + " 排名:" + this.getPosition();
     }
 }

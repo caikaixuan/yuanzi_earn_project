@@ -37,67 +37,67 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="chargeExchangeRate != null">
-        charge_exchange_rate = #{chargeExchangeRate,jdbcType=INTEGER}
+        and charge_exchange_rate = #{chargeExchangeRate,jdbcType=INTEGER}
       </if>
       <if test="withdrawExchangeRate != null">
-        withdraw_exchange_rate = #{withdrawExchangeRate,jdbcType=INTEGER}
+        and withdraw_exchange_rate = #{withdrawExchangeRate,jdbcType=INTEGER}
       </if>
       <if test="poolInitIntegration != null">
-        pool_init_integration = #{poolInitIntegration,jdbcType=INTEGER}
+        and pool_init_integration = #{poolInitIntegration,jdbcType=INTEGER}
       </if>
       <if test="poolInitParticipateIntegration != null">
-        pool_init_participate_integration = #{poolInitParticipateIntegration,jdbcType=INTEGER}
+        and pool_init_participate_integration = #{poolInitParticipateIntegration,jdbcType=INTEGER}
       </if>
       <if test="poolPlanRate != null">
-        pool_plan_rate = #{poolPlanRate,jdbcType=INTEGER}
+        and pool_plan_rate = #{poolPlanRate,jdbcType=INTEGER}
       </if>
       <if test="poolIntegrationMax != null">
-        pool_integration_max = #{poolIntegrationMax,jdbcType=INTEGER}
+        and pool_integration_max = #{poolIntegrationMax,jdbcType=INTEGER}
       </if>
       <if test="poolIntegrationMin != null">
-        pool_integration_min = #{poolIntegrationMin,jdbcType=INTEGER}
+        and pool_integration_min = #{poolIntegrationMin,jdbcType=INTEGER}
       </if>
       <if test="poolNeedMeddle != null">
-        pool_need_meddle = #{poolNeedMeddle,jdbcType=BIT}
+        and pool_need_meddle = #{poolNeedMeddle,jdbcType=BIT}
       </if>
       <if test="poolPlanPeriod != null">
-        pool_plan_period = #{poolPlanPeriod,jdbcType=INTEGER}
+        and pool_plan_period = #{poolPlanPeriod,jdbcType=INTEGER}
       </if>
       <if test="userPlanRate != null">
-        user_plan_rate = #{userPlanRate,jdbcType=INTEGER}
+        and user_plan_rate = #{userPlanRate,jdbcType=INTEGER}
       </if>
       <if test="userCanInvite != null">
-        user_can_invite = #{userCanInvite,jdbcType=BIT}
+        and user_can_invite = #{userCanInvite,jdbcType=BIT}
       </if>
       <if test="userNumLimit != null">
-        user_num_limit = #{userNumLimit,jdbcType=INTEGER}
+        and user_num_limit = #{userNumLimit,jdbcType=INTEGER}
       </if>
       <if test="successLine != null">
-        success_line = #{successLine,jdbcType=INTEGER}
+        and success_line = #{successLine,jdbcType=INTEGER}
       </if>
       <if test="inviteFriendNumLimit != null">
-        invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
+        and invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
       </if>
       <if test="appVersion != null">
-        app_version = #{appVersion,jdbcType=INTEGER}
+        and app_version = #{appVersion,jdbcType=INTEGER}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

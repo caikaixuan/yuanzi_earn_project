@@ -1,3 +1,4 @@
+
 #奖池表
 CREATE TABLE `pool` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '数据库编号',
@@ -288,5 +289,7 @@ CREATE TABLE `sys_parameter` (
   `is_del` tinyint(1) DEFAULT '0' COMMENT '逻辑删除标志(0:正常,1:已删除)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='系统参数表(SYS_PARAMETER)';
+
+
 
 

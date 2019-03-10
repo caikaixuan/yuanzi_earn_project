@@ -108,4 +108,10 @@ public class UserPoolRecordModel extends BaseModel{
         this.status = status == null ? null : status.trim();
     }
 
+    @Override
+    public String toString() {
+        return "[user_pool_record]" + "奖池ID:"+this.getPoolId()+" 用户ID:"+this.getUserId()+" 用户名:【" + this
+                .getUserNickName() + "】 答对题数:" + this.getRightNum() +" 消耗积分:"+this.getConsumeIntegration()+" 挑战结果:" + this.getResult();
+    }
+
 }

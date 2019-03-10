@@ -21,7 +21,7 @@ import java.nio.charset.Charset;
 
 public abstract class BaseRequest<T, M> {
 
-    protected static final String BASE_REQUEST_URL = "http://127.0.0.1:8080/earn-business-management-web/";
+    protected static final String BASE_REQUEST_URL = "http://127.0.0.1:8081/earn-business-management-web/";
 
     protected final HttpClient httpClient = HttpClientBuilder.create().build();
 
@@ -53,13 +53,15 @@ public abstract class BaseRequest<T, M> {
             if (state == HttpStatus.SC_OK) {
                 Resp<M> resp = JSON.parseObject(EntityUtils.toString(httpResponse.getEntity()), Resp.class);
                 Object dataObject = resp.getData();
-                if (dataObject instanceof JSONArray) {
-                    M data = (M) JSONArray.parseArray(JSON.toJSONString(dataObject), getRespDataClass());
-                    resp.setData(data);
-                }
-                if (dataObject instanceof JSONObject) {
-                    M data = (M) JSON.parseObject(JSON.toJSONString(dataObject), getRespDataClass());
-                    resp.setData(data);
+                if(dataObject != null){
+                    if (dataObject instanceof JSONArray) {
+                        M data = (M) JSONArray.parseArray(JSON.toJSONString(dataObject), getRespDataClass());
+                        resp.setData(data);
+                    }
+                    if (dataObject instanceof JSONObject) {
+                        M data = (M) JSON.parseObject(JSON.toJSONString(dataObject), getRespDataClass());
+                        resp.setData(data);
+                    }
                 }
                 return resp;
             }

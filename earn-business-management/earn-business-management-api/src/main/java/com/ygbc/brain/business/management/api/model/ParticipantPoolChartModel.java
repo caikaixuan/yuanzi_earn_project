@@ -131,4 +131,11 @@ public class ParticipantPoolChartModel {
         this.status = status == null ? null : status.trim();
     }
 
+    @Override
+    public String toString() {
+        return "[participant_pool_chart] "+ "奖池ID:" + this.getPoolId() + " 挑战者排名ID:" + this.getParticipantPoolChartId() + " 用户ID:" + this.getUserId() + " 用户名:【" + this
+                .getUserNickName() + "】 参与次数:" + this.getParticipateTimes() + " 成功次数:" + this.getSuccessTimes() + " 奖励:" + this
+                .getEarnings() + " 排名:" + this.getPosition();
+    }
+
 }

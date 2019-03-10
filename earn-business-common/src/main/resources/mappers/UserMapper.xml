@@ -53,112 +53,112 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="userId != null">
-        user_id = #{userId,jdbcType=BIGINT}
+        and user_id = #{userId,jdbcType=BIGINT}
       </if>
       <if test="password != null">
-        password = #{password,jdbcType=VARCHAR}
+        and password = #{password,jdbcType=VARCHAR}
       </if>
       <if test="nickName != null">
-        nick_name = #{nickName,jdbcType=VARCHAR}
+        and nick_name = #{nickName,jdbcType=VARCHAR}
       </if>
       <if test="telphone != null">
-        telphone = #{telphone,jdbcType=VARCHAR}
+        and telphone = #{telphone,jdbcType=VARCHAR}
       </if>
       <if test="wechat != null">
-        wechat = #{wechat,jdbcType=VARCHAR}
+        and wechat = #{wechat,jdbcType=VARCHAR}
       </if>
       <if test="qq != null">
-        qq = #{qq,jdbcType=VARCHAR}
+        and qq = #{qq,jdbcType=VARCHAR}
       </if>
       <if test="email != null">
-        email = #{email,jdbcType=VARCHAR}
+        and email = #{email,jdbcType=VARCHAR}
       </if>
       <if test="signSaying != null">
-        sign_saying = #{signSaying,jdbcType=VARCHAR}
+        and sign_saying = #{signSaying,jdbcType=VARCHAR}
       </if>
       <if test="headSculptureImageUrl != null">
-        head_sculpture_image_url = #{headSculptureImageUrl,jdbcType=VARCHAR}
+        and head_sculpture_image_url = #{headSculptureImageUrl,jdbcType=VARCHAR}
       </if>
       <if test="planRate != null">
-        plan_rate = #{planRate,jdbcType=INTEGER}
+        and plan_rate = #{planRate,jdbcType=INTEGER}
       </if>
       <if test="currentRate != null">
-        current_rate = #{currentRate,jdbcType=INTEGER}
+        and current_rate = #{currentRate,jdbcType=INTEGER}
       </if>
       <if test="goodAt != null">
-        good_at = #{goodAt,jdbcType=BIGINT}
+        and good_at = #{goodAt,jdbcType=BIGINT}
       </if>
       <if test="interestIn != null">
-        interest_in = #{interestIn,jdbcType=BIGINT}
+        and interest_in = #{interestIn,jdbcType=BIGINT}
       </if>
       <if test="canInvite != null">
-        can_invite = #{canInvite,jdbcType=BIT}
+        and can_invite = #{canInvite,jdbcType=BIT}
       </if>
       <if test="inviteCode != null">
-        invite_code = #{inviteCode,jdbcType=VARCHAR}
+        and invite_code = #{inviteCode,jdbcType=VARCHAR}
       </if>
       <if test="inviteFriendNumLimit != null">
-        invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
+        and invite_friend_num_limit = #{inviteFriendNumLimit,jdbcType=INTEGER}
       </if>
       <if test="invitedFriendNum != null">
-        invited_friend_num = #{invitedFriendNum,jdbcType=INTEGER}
+        and invited_friend_num = #{invitedFriendNum,jdbcType=INTEGER}
       </if>
       <if test="isInvited != null">
-        is_invited = #{isInvited,jdbcType=BIT}
+        and is_invited = #{isInvited,jdbcType=BIT}
       </if>
       <if test="invitorUserId != null">
-        invitor_user_id = #{invitorUserId,jdbcType=BIGINT}
+        and invitor_user_id = #{invitorUserId,jdbcType=BIGINT}
       </if>
       <if test="isRobot != null">
-        is_robot = #{isRobot,jdbcType=BIT}
+        and is_robot = #{isRobot,jdbcType=BIT}
       </if>
       <if test="integration != null">
-        integration = #{integration,jdbcType=INTEGER}
+        and integration = #{integration,jdbcType=INTEGER}
       </if>
       <if test="lastWithdraw != null">
-        last_withdraw = #{lastWithdraw,jdbcType=DATE}
+        and last_withdraw = #{lastWithdraw,jdbcType=DATE}
       </if>
       <if test="canWithdraw != null">
-        can_withdraw = #{canWithdraw,jdbcType=BIT}
+        and can_withdraw = #{canWithdraw,jdbcType=BIT}
       </if>
       <if test="withdraw != null">
-        withdraw = #{withdraw,jdbcType=DECIMAL}
+        and withdraw = #{withdraw,jdbcType=DECIMAL}
       </if>
       <if test="gain != null">
-        gain = #{gain,jdbcType=INTEGER}
+        and gain = #{gain,jdbcType=INTEGER}
       </if>
       <if test="lastWeekGain != null">
-        last_week_gain = #{lastWeekGain,jdbcType=INTEGER}
+        and last_week_gain = #{lastWeekGain,jdbcType=INTEGER}
       </if>
       <if test="charge != null">
-        charge = #{charge,jdbcType=DECIMAL}
+        and charge = #{charge,jdbcType=DECIMAL}
       </if>
       <if test="lastLoginTime != null">
-        last_login_time = #{lastLoginTime,jdbcType=DATE}
+        and last_login_time = #{lastLoginTime,jdbcType=DATE}
       </if>
       <if test="rank != null">
-        rank = #{rank,jdbcType=INTEGER}
+        and rank = #{rank,jdbcType=INTEGER}
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=VARCHAR}
+        and status = #{status,jdbcType=VARCHAR}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

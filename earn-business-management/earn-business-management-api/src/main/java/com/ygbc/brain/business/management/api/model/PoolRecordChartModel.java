@@ -5,58 +5,58 @@ import com.ygbc.brain.base.model.BaseModel;
 
 public class PoolRecordChartModel extends BaseModel {
     /**
-    * 挑战成功排名编号
-    */
+     * 挑战成功排名编号
+     */
     private Long poolRecordChartId;
 
-    /** 
-    * 挑战记录编号
-    */
+    /**
+     * 挑战记录编号
+     */
     private Long userPoolRecordId;
 
-    /** 
-    * 奖池编号
-    */
+    /**
+     * 奖池编号
+     */
     private Long poolId;
 
-    /** 
-    * 用户编号
-    */
+    /**
+     * 用户编号
+     */
     private Long userId;
 
-    /** 
-    * 用户昵称
-    */
+    /**
+     * 用户昵称
+     */
     private String userNickName;
 
-    /** 
-    * 答对题数
-    */
+    /**
+     * 答对题数
+     */
     private Integer rightNum;
 
-    /** 
-    * 得分
-    */
+    /**
+     * 得分
+     */
     private Integer grade;
 
-    /** 
-    * 排名
-    */
+    /**
+     * 排名
+     */
     private Integer position;
 
-    /** 
-    * 奖励等级
-    */
+    /**
+     * 奖励等级
+     */
     private Integer awardLevel;
 
-    /** 
-    * 奖励积分
-    */
+    /**
+     * 奖励积分
+     */
     private Integer awardIntegration;
 
-    /** 
-    * 排名状态
-    */
+    /**
+     * 排名状态
+     */
     private String status;
 
     public Long getPoolRecordChartId() {
@@ -145,6 +145,13 @@ public class PoolRecordChartModel extends BaseModel {
 
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "[pool_record_chart] " + "奖池ID:" + this.getPoolId() + " 挑战记录排名ID:" + this.getPoolRecordChartId() + " 用户ID:" + this.getUserId() + " 用户名:【" + this
+                .getUserNickName() + "】 答对题数:" + this.getRightNum() + " 得分:" + this.getGrade() + " 奖励等级:" + this
+                .getAwardLevel() + " 奖励积分:" + this.getAwardIntegration() + " 排名:" + this.getPosition();
     }
 
 }

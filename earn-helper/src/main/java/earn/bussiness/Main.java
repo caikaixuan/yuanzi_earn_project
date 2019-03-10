@@ -1,26 +1,21 @@
 package earn.bussiness;
 
-import com.ygbc.brain.base.rpc.Resp;
-import com.ygbc.brain.business.management.api.dto.user.QueryUserListReqDTO;
-import com.ygbc.brain.business.management.api.model.PoolModel;
-import com.ygbc.brain.business.management.api.model.UserModel;
-import earn.bussiness.http.request.pool.GetCurrentPoolRequest;
-import earn.bussiness.http.request.user.GetUsersRequest;
+import com.ygbc.brain.business.common.enums.PoolRecordChartStatus;
+import com.ygbc.brain.business.common.enums.UserPoolRecordStatus;
+import com.ygbc.brain.business.management.api.dto.pool_record_chart.QueryPoolRecordChartListReqDTO;
+import com.ygbc.brain.business.management.api.dto.user_pool_record.QueryUserPoolRecordListReqDTO;
+import com.ygbc.brain.business.management.api.model.PoolRecordChartModel;
+import com.ygbc.brain.business.management.api.model.UserPoolRecordModel;
+import earn.bussiness.http.request.pool_record_chart.PoolRecordChartListRequest;
+import earn.bussiness.http.request.user_pool_record.UserPoolRecordListRequest;
+import earn.bussiness.thread.SimulatePoolRunThread;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        GetUsersRequest getUsersRequest = new GetUsersRequest(new QueryUserListReqDTO());
-//        for(UserModel userModel : getUsersRequest.execForModel()){
-//            System.out.println("ID: " + userModel.getUserId() + " name: " + userModel.getNickName());
-//        }
-
-//        GetCurrentPoolRequest getCurrentPoolRequest = new GetCurrentPoolRequest();
-//        PoolModel poolModel = getCurrentPoolRequest.execForModel();
-//        if(poolModel != null){
-//            System.out.println(poolModel.getPoolId());
-//        }
+        SimulatePoolRunThread simulatePoolRunThread = new SimulatePoolRunThread("pool thread");
+        simulatePoolRunThread.start();
 
 
     }

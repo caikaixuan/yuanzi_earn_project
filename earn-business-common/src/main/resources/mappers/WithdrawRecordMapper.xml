@@ -27,46 +27,46 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="withdrawRecordId != null">
-        withdraw_record_id = #{withdrawRecordId,jdbcType=BIGINT}
+        and withdraw_record_id = #{withdrawRecordId,jdbcType=BIGINT}
       </if>
       <if test="userId != null">
-        user_id = #{userId,jdbcType=BIGINT}
+        and user_id = #{userId,jdbcType=BIGINT}
       </if>
       <if test="balance != null">
-        balance = #{balance,jdbcType=DECIMAL}
+        and balance = #{balance,jdbcType=DECIMAL}
       </if>
       <if test="channel != null">
-        channel = #{channel,jdbcType=VARCHAR}
+        and channel = #{channel,jdbcType=VARCHAR}
       </if>
       <if test="consumeIntegration != null">
-        consume_integration = #{consumeIntegration,jdbcType=INTEGER}
+        and consume_integration = #{consumeIntegration,jdbcType=INTEGER}
       </if>
       <if test="beforeWithdrawIntegration != null">
-        before_withdraw_integration = #{beforeWithdrawIntegration,jdbcType=INTEGER}
+        and before_withdraw_integration = #{beforeWithdrawIntegration,jdbcType=INTEGER}
       </if>
       <if test="afterWithdrawIntegration != null">
-        after_withdraw_integration = #{afterWithdrawIntegration,jdbcType=INTEGER}
+        and after_withdraw_integration = #{afterWithdrawIntegration,jdbcType=INTEGER}
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=VARCHAR}
+        and status = #{status,jdbcType=VARCHAR}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

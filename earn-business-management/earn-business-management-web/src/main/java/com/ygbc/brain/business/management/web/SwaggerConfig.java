@@ -24,6 +24,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("组网式脑图分析管理系统-业务数据接口文档").description("").termsOfServiceUrl("http://localhost:8080/earn-business-mamagement-web/").version("1.0").build();
+        return new ApiInfoBuilder().title("组网式脑图分析管理系统-业务数据接口文档").description("").termsOfServiceUrl
+                ("http://localhost:8081/earn-business-mamagement-web/").version("1.0").build();
     }
 }

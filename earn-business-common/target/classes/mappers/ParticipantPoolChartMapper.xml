@@ -29,52 +29,52 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="participantPoolChartId != null">
-        participant_pool_chart_id = #{participantPoolChartId,jdbcType=BIGINT}
+        and participant_pool_chart_id = #{participantPoolChartId,jdbcType=BIGINT}
       </if>
       <if test="userPoolRecordId != null">
-        user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
+        and user_pool_record_id = #{userPoolRecordId,jdbcType=BIGINT}
       </if>
       <if test="poolId != null">
-        pool_id = #{poolId,jdbcType=BIGINT}
+        and pool_id = #{poolId,jdbcType=BIGINT}
       </if>
       <if test="userId != null">
-        user_id = #{userId,jdbcType=BIGINT}
+        and user_id = #{userId,jdbcType=BIGINT}
       </if>
       <if test="userNickName != null">
-        user_nick_name = #{userNickName,jdbcType=VARCHAR}
+        and user_nick_name = #{userNickName,jdbcType=VARCHAR}
       </if>
       <if test="participateTimes != null">
-        participate_times >= #{participateTimes,jdbcType=INTEGER}
+        and participate_times >= #{participateTimes,jdbcType=INTEGER}
       </if>
       <if test="successTimes != null">
-        success_times >= #{successTimes,jdbcType=INTEGER}
+        and success_times >= #{successTimes,jdbcType=INTEGER}
       </if>
       <if test="earnings != null">
-        earnings >= #{earnings,jdbcType=INTEGER}
+        and earnings >= #{earnings,jdbcType=INTEGER}
       </if>
       <if test="position != null">
-        position >= #{position,jdbcType=INTEGER}
+        and position >= #{position,jdbcType=INTEGER}
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=VARCHAR}
+        and status = #{status,jdbcType=VARCHAR}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

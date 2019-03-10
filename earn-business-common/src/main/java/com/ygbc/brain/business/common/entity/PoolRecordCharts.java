@@ -98,4 +98,13 @@ public class PoolRecordCharts extends AttributeEntity<PoolRecordCharts,PoolRecor
         }
     }
 
+    @Override
+    public String toString() {
+        String string="";
+        for(PoolRecordChart poolRecordChart : charts){
+            string += poolRecordChart.toString();
+            string += "\n";
+        }
+        return string.substring(0,string.length()-1);
+    }
 }

@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="brain-common-utils" />
+        <module name="earn-common-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="brain-common-utils" target="1.7" />
+      <module name="earn-common-utils" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

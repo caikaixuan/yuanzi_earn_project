@@ -27,49 +27,49 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="questionId != null">
-        question_id = #{questionId,jdbcType=BIGINT}
+        and question_id = #{questionId,jdbcType=BIGINT}
       </if>
       <if test="content != null">
-        content = #{content,jdbcType=VARCHAR}
+        and content = #{content,jdbcType=VARCHAR}
       </if>
       <if test="options != null">
-        options = #{options,jdbcType=VARCHAR}
+        and options = #{options,jdbcType=VARCHAR}
       </if>
       <if test="answer != null">
-        answer = #{answer,jdbcType=VARCHAR}
+        and answer = #{answer,jdbcType=VARCHAR}
       </if>
       <if test="parsing != null">
-        parsing = #{parsing,jdbcType=VARCHAR}
+        and parsing = #{parsing,jdbcType=VARCHAR}
       </if>
       <if test="topicId != null">
-        topic_id = #{topicId,jdbcType=BIGINT}
+        and topic_id = #{topicId,jdbcType=BIGINT}
       </if>
       <if test="type != null">
-        type = #{type,jdbcType=INTEGER}
+        and type = #{type,jdbcType=INTEGER}
       </if>
       <if test="difficulty != null">
-        difficulty = #{difficulty,jdbcType=INTEGER}
+        and difficulty = #{difficulty,jdbcType=INTEGER}
       </if>
       <if test="currentRate != null">
-        current_rate = #{currentRate,jdbcType=INTEGER}
+        and current_rate = #{currentRate,jdbcType=INTEGER}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

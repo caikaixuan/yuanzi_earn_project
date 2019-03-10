@@ -46,7 +46,7 @@ public class PoolProcessor implements Observable<Pool, PoolProcessorEvent> {
         while (iterator.hasNext()) {
             long poolId = iterator.next();
             Pool pool = currentPools.get(poolId);
-            if (pool.getStatus().equals(PoolStatus.LOCKED) || pool.getPlanEndTime().compareTo(new Date()) < 0) {
+            if (pool.getStatus().equals(PoolStatus.LOCKED.getValue()) || pool.getPlanEndTime().compareTo(new Date()) < 0) {
                 try {
                     pool.setStatus(PoolStatus.LOCKED.getValue());
                     PoolProcessor.this.notify(pool, PoolProcessorEvent.POOL_BE_LOCKED);

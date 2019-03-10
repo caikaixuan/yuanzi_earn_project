@@ -318,4 +318,17 @@ public class PoolModel extends BaseModel {
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "[pool] " + "奖池ID:" + this.getPoolId() + " 初始奖励积分:" + this.getInitIntegration() + " 初始参与积分:" + this
+                .getInitParticipateIntegration() + " 累积积分上限:" + this.getIntegrationMax() + " 累积积分下限:" + this
+                .getIntegrationMin() + " 计划挑战率:" + this.getPlanParticipationRate() + " 计划挑战者率" + this.getPlanParticipantRate
+                () + " 当前挑战率:" + this.getCurrentParticipationRate() + "当前挑战者率:" + this.getCurrentParticipantRate() + " " +
+                " 当前累积积分:" + this.getCurrentIntegration() + " 当前参与积分:" + this.getCurrentParticipateIntegration() + " " +
+                " 参与人数:" + this.getParticipantNum() + " 参与次数:" + this.getParticipationTimes() + " 成功人数:" + this.getWinnerNum()
+                + " 成功次数:" + this.getSuccessTimes() + " 计划持续时长:" + this.getPlanPeriod() + " 实际持续时长:" + this.getActuallyPeriod()
+                + " 计划结束时间:" + this.getPlanEndTime() + " 实际结束时间:" + this.getActuallyEndTime() + " 奖励总积分:" + this
+                .getAwardIntegration() + " 利润:" + this.getProfitIntegration() + " 是否盈利:" + this.getIsEarn() + " 是否干预:" + this.getNeedMeddle();
+    }
+
 }

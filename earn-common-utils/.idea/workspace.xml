@@ -47,7 +47,7 @@
       <file leaf-file-name="LogAspect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/common/aspect/LogAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="600">
               <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -334,9 +334,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -582,6 +582,7 @@
       <workItem from="1551171724867" duration="106000" />
       <workItem from="1551184296301" duration="933000" />
       <workItem from="1551449960621" duration="1145000" />
+      <workItem from="1552113713155" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="1.MybatisAutoMapperInterceptor修改原因：AlgorithmData,ExperimentAlgorithmData中有属性为对象类型。&#10;2.DeepBeanUtils修改原因：DeepBeanUtils.copyAs(str,String.class)结果出错。">
       <created>1546677697894</created>
@@ -608,11 +609,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56741000" />
+    <option name="totallyTimeSpent" value="56761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -654,6 +654,7 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="1.MybatisAutoMapperInterceptor修改原因：AlgorithmData,ExperimentAlgorithmData中有属性为对象类型。&#10;2.DeepBeanUtils修改原因：DeepBeanUtils.copyAs(str,String.class)结果出错。" />
     <MESSAGE value="1.增加JSONTypeHandler。实现mybatis中将数据库中varchar类型转换为结果集中JSONObject类型" />
@@ -1014,7 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ygbc/brain/common/aspect/LogAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="600">
           <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />

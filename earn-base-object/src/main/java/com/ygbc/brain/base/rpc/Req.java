@@ -50,12 +50,12 @@ public class Req<T> implements Serializable {
     /**
      * 页码(当前页)
      */
-    private Integer pageNo;
+    private Integer pageNo = 1;
 
     /**
      * 分页大小(每页数量)
      */
-    private Integer pageSize;
+    private Integer pageSize = Integer.MAX_VALUE;
 
     /**
      * 排序字段

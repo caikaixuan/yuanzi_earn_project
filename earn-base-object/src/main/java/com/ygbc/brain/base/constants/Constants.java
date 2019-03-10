@@ -35,6 +35,8 @@ public class Constants {
     public static final int CHALLENGE_SIZE = 10;
     public static final int CHALLENGE_PAGE_NUMBER = 1;
 
+    public static final String LINE_BREAK = System.getProperty("");
+
 
 
 }

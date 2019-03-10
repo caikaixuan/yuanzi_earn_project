@@ -146,11 +146,11 @@ public class PoolRecordChart extends AttributeEntity<PoolRecordChart, PoolRecord
         return 0;
     }
 
-    public void save(){
-        if(data != null){
-            if(getId() != null){
+    public void save() {
+        if (data != null) {
+            if (getId() != null) {
                 Platform.sdbUpdate(data);
-            }else{
+            } else {
                 Platform.sdbInsert(data);
             }
         }
@@ -159,16 +159,23 @@ public class PoolRecordChart extends AttributeEntity<PoolRecordChart, PoolRecord
     @Override
     public int compareTo(PoolRecordChart o) {
         int result;
-        if(this.getPosition() != null && o.getPosition() != null){
-            if ((result = Integer.compare(o.getPosition(),this.getPosition())) != 0) {
+        if (this.getPosition() != null && o.getPosition() != null) {
+            if ((result = Integer.compare(o.getPosition(), this.getPosition())) != 0) {
                 return result;
             }
         }
-        if(this.getGrade() != null && o.getGrade() != null){
-            if ((result = Integer.compare(o.getGrade(),this.getGrade())) != 0) {
+        if (this.getGrade() != null && o.getGrade() != null) {
+            if ((result = Integer.compare(o.getGrade(), this.getGrade())) != 0) {
                 return result;
             }
         }
-        return o.getCreateTime().compareTo(this.getCreateTime());
+        return this.getCreateTime().compareTo(o.getCreateTime());
+    }
+
+    @Override
+    public String toString() {
+        return "奖池ID:" + this.getPoolId() + " 挑战记录排名ID:" + this.getPoolRecordChartId() + " 用户ID:" + this.getUserId() + " 用户名:【" + this
+                .getUserNickName() + "】 答对题数:" + this.getRightNum() + " 得分:" + this.getGrade() + " 奖励等级:" + this
+                .getAwardLevel() + " 奖励积分:" + this.getAwardIntegration() + " 排名:" + this.getPosition();
     }
 }

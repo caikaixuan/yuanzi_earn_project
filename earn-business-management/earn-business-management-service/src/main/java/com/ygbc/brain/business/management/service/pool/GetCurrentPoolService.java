@@ -4,6 +4,7 @@ import com.ygbc.brain.base.constants.Constants;
 import com.ygbc.brain.base.rpc.Req;
 import com.ygbc.brain.base.rpc.Resp;
 import com.ygbc.brain.business.common.dal.data.PoolData;
+import com.ygbc.brain.business.common.entity.Pool;
 import com.ygbc.brain.business.common.processor.pool.PoolProcessor;
 import com.ygbc.brain.business.common.service.base.BaseExecutableService;
 import com.ygbc.brain.business.management.api.dto.pool.GetCurrentPoolReqDTO;
@@ -20,16 +21,16 @@ public class GetCurrentPoolService extends BaseExecutableService<Req<GetCurrentP
     @Override
     public Resp<PoolModel> execute(Req<GetCurrentPoolReqDTO> req) throws Exception {
         Long poolId = req.getData().getPoolId();
-        PoolData poolData = null;
+        Pool pool = null;
         if(poolId != null){
-            poolData = processor.getPool(poolId).getData();
+            pool = processor.getPool(poolId);
         }else{
-            poolData = processor.getPool().getData();
+            pool = processor.getPool();
         }
-        if (poolData == null) {
+        if (pool == null) {
             return Resp.build(PoolModel.class, Constants.PARAM_RESULTBLANK_CODE, Constants.PARAM_RESULTBLANK_DESC);
         } else {
-            return Resp.build(DeepBeanUtils.copyAs(poolData, PoolModel.class));
+            return Resp.build(DeepBeanUtils.copyAs(pool.getData(), PoolModel.class));
         }
     }
 }

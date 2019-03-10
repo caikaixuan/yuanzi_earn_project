@@ -16,6 +16,7 @@
       <module name="brain-common-service-api" target="1.7" />
       <module name="brain-common-service-service" target="1.7" />
       <module name="brain-common-service-web" target="1.7" />
+      <module name="earn-common-service" target="1.7" />
       <module name="earn-common-service-api" target="1.7" />
       <module name="earn-common-service-service" target="1.7" />
       <module name="earn-common-service-web" target="1.7" />

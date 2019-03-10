@@ -47,91 +47,91 @@
   <sql id="SQL_FILTER">
     <where>
       <if test="id != null">
-        id = #{id,jdbcType=BIGINT}
+        and id = #{id,jdbcType=BIGINT}
       </if>
       <if test="poolId != null">
-        pool_id = #{poolId,jdbcType=BIGINT}
+        and pool_id = #{poolId,jdbcType=BIGINT}
       </if>
       <if test="initIntegration != null">
-        init_integration = #{initIntegration,jdbcType=INTEGER}
+        and init_integration = #{initIntegration,jdbcType=INTEGER}
       </if>
       <if test="initParticipateIntegration != null">
-        init_participate_integration = #{initParticipateIntegration,jdbcType=INTEGER}
+        and init_participate_integration = #{initParticipateIntegration,jdbcType=INTEGER}
       </if>
       <if test="integrationMax != null">
-        integration_max = #{integrationMax,jdbcType=INTEGER}
+        and integration_max = #{integrationMax,jdbcType=INTEGER}
       </if>
       <if test="integrationMin != null">
-        integration_min = #{integrationMin,jdbcType=INTEGER}
+        and integration_min = #{integrationMin,jdbcType=INTEGER}
       </if>
       <if test="planRate != null">
-        plan_rate = #{planRate,jdbcType=INTEGER}
+        and plan_rate = #{planRate,jdbcType=INTEGER}
       </if>
       <if test="currentRate != null">
-        current_rate = #{currentRate,jdbcType=INTEGER}
+        and current_rate = #{currentRate,jdbcType=INTEGER}
       </if>
       <if test="currentIntegration != null">
-        current_integration = #{currentIntegration,jdbcType=INTEGER}
+        and current_integration = #{currentIntegration,jdbcType=INTEGER}
       </if>
       <if test="currentParticipateIntegration != null">
-        current_participate_integration = #{currentParticipateIntegration,jdbcType=INTEGER}
+        and current_participate_integration = #{currentParticipateIntegration,jdbcType=INTEGER}
       </if>
       <if test="participantNum != null">
-        participant_num = #{participantNum,jdbcType=INTEGER}
+        and participant_num = #{participantNum,jdbcType=INTEGER}
       </if>
       <if test="participationTimes != null">
-        participation_times = #{participationTimes,jdbcType=INTEGER},
+        and participation_times = #{participationTimes,jdbcType=INTEGER},
       </if>
       <if test="winnerNum != null">
-        winner_num = #{winnerNum,jdbcType=INTEGER}
+        and winner_num = #{winnerNum,jdbcType=INTEGER}
       </if>
       <if test="successTimes != null">
-        success_times = #{successTimes,jdbcType=INTEGER},
+        and success_times = #{successTimes,jdbcType=INTEGER},
       </if>
       <if test="planPeriod != null">
-        plan_period = #{planPeriod,jdbcType=INTEGER}
+        and plan_period = #{planPeriod,jdbcType=INTEGER}
       </if>
       <if test="planEndTime != null">
-        plan_end_time = #{planEndTime,jdbcType=DATE}
+        and plan_end_time = #{planEndTime,jdbcType=DATE}
       </if>
       <if test="actuallyPeriod != null">
-        actually_period = #{actuallyPeriod,jdbcType=INTEGER}
+        and actually_period = #{actuallyPeriod,jdbcType=INTEGER}
       </if>
       <if test="actuallyEndTime != null">
-        actually_end_time = #{actuallyEndTime,jdbcType=DATE}
+        and actually_end_time = #{actuallyEndTime,jdbcType=DATE}
       </if>
       <if test="awardIntegration != null">
-        award_integration = #{awardIntegration,jdbcType=INTEGER},
+        and award_integration = #{awardIntegration,jdbcType=INTEGER},
       </if>
       <if test="profitIntegration != null">
-        profit_integration = #{profitIntegration,jdbcType=INTEGER}
+        and profit_integration = #{profitIntegration,jdbcType=INTEGER}
       </if>
       <if test="isEarn != null">
-        is_earn = #{isEarn,jdbcType=BIT}
+        and is_earn = #{isEarn,jdbcType=BIT}
       </if>
       <if test="needMeddle != null">
-        need_meddle = #{needMeddle,jdbcType=BIT}
+        and need_meddle = #{needMeddle,jdbcType=BIT}
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=VARCHAR}
+        and status = #{status,jdbcType=VARCHAR}
       </if>
       <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP}
+        and create_time = #{createTime,jdbcType=TIMESTAMP}
       </if>
       <if test="createBy != null">
-        create_by = #{createBy,jdbcType=VARCHAR}
+        and create_by = #{createBy,jdbcType=VARCHAR}
       </if>
       <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        and update_time = #{updateTime,jdbcType=TIMESTAMP}
       </if>
       <if test="updateBy != null">
-        update_by = #{updateBy,jdbcType=VARCHAR}
+        and update_by = #{updateBy,jdbcType=VARCHAR}
       </if>
       <if test="ver != null">
-        ver = #{ver,jdbcType=INTEGER}
+        and ver = #{ver,jdbcType=INTEGER}
       </if>
       <if test="isDel != null">
-        is_del = #{isDel,jdbcType=BIT}
+        and is_del = #{isDel,jdbcType=BIT}
       </if>
       and 1 = 1
     </where>

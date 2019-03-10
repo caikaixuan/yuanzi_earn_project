@@ -98,4 +98,14 @@ public class ParticipantPoolCharts extends AttributeEntity<ParticipantPoolCharts
             }
         }
     }
+
+    @Override
+    public String toString() {
+        String string="";
+        for(ParticipantPoolChart participantPoolChart : charts){
+            string += participantPoolChart.toString();
+            string += "\n";
+        }
+        return string.substring(0,string.length()-1);
+    }
 }
